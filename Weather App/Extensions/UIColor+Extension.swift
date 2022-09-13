@@ -14,8 +14,8 @@ extension UIColor {
 }
 
 public extension UIColor {
-    static let navBarColor: UIColor = UIColor(r: 190, g: 64, b: 74, alpha: 1)
-    static let appBackgroundColor: UIColor = UIColor(r: 235, g: 235, b: 235, alpha: 1)
+    static let navBarColor: UIColor = UIColor(r: 255, g: 212, b: 232, alpha: 1)
+    static let appBackgroundColor: UIColor = UIColor(r: 250, g: 228, b: 232, alpha: 1)
     static let spinnerColor: UIColor = .white
     static let mainPageTableViewCellColor: UIColor = .clear
 }

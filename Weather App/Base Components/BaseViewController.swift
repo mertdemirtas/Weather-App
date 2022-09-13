@@ -37,7 +37,7 @@ class BaseViewController<T: BaseViewModel>: UIViewController {
     
     private func prepareNavigationBar() {
         nav.backgroundColor = .navBarColor
-        nav.largeTitleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.systemFont(ofSize: 32, weight: .bold)]
+        nav.largeTitleTextAttributes = [.foregroundColor: UIColor.black, .font: UIFont.systemFont(ofSize: 32, weight: .medium)]
         
         let navBar = self.navigationController?.navigationBar
         
