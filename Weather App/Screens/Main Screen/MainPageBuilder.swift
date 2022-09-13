@@ -12,6 +12,7 @@ class MainPageBuilder {
     class func build() -> UIViewController {
         let viewModel = MainPageViewModel()
         let vc = MainPageViewController(viewModel: viewModel)
+        vc.title = "Tuzla"
         return vc
     }
 }

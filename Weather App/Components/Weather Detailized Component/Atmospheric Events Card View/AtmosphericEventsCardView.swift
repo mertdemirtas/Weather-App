@@ -10,13 +10,13 @@ import UIKit
 
 class AtmosphericEventsCardView: GenericBaseView<AtmosphericEventsCardViewData> {
     // MARK: Constants
-    private let containerStackViewSpacingValue: CGFloat = 5.0
+    private let containerStackViewSpacingValue: CGFloat = 10.0
     
     // MARK: Components
     private lazy var containerStackView: UIStackView = {
         let temp = UIStackView()
         temp.distribution = .fillEqually
-        temp.axis = .horizontal
+        temp.axis = .vertical
         temp.spacing = containerStackViewSpacingValue
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
@@ -60,6 +60,6 @@ class AtmosphericEventsCardView: GenericBaseView<AtmosphericEventsCardViewData> 
         guard let data = returnData() else { return }
         rainContainerView.setData(by: AtmosphericEventsData(image: "rain", name: "Rain Fall", value: String(data.rainValue)))
         humidityContainerView.setData(by: AtmosphericEventsData(image: "humidity", name: "Humidity", value: String(data.humidityValue)))
-        rainContainerView.setData(by: AtmosphericEventsData(image: "wind", name: "Wind", value: String(data.windValue)))
+        windContainerView.setData(by: AtmosphericEventsData(image: "wind", name: "Wind", value: String(data.windValue)))
     }
 }

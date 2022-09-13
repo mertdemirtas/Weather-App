@@ -54,6 +54,8 @@
 		400017DA28D0E3F800F8B0FE /* AtmosphericEventsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017D928D0E3F800F8B0FE /* AtmosphericEventsData.swift */; };
 		400017DD28D0F13200F8B0FE /* AtmosphericEventsCardViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017DC28D0F13200F8B0FE /* AtmosphericEventsCardViewData.swift */; };
 		400017DF28D0F14C00F8B0FE /* AtmosphericEventsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017DE28D0F14C00F8B0FE /* AtmosphericEventsCardView.swift */; };
+		400017E328D0FC0B00F8B0FE /* HourlyWeatherForecastRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017E228D0FC0B00F8B0FE /* HourlyWeatherForecastRequest.swift */; };
+		400017E528D0FE5C00F8B0FE /* CityByLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017E428D0FE5C00F8B0FE /* CityByLocationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +103,8 @@
 		400017D928D0E3F800F8B0FE /* AtmosphericEventsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmosphericEventsData.swift; sourceTree = "<group>"; };
 		400017DC28D0F13200F8B0FE /* AtmosphericEventsCardViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmosphericEventsCardViewData.swift; sourceTree = "<group>"; };
 		400017DE28D0F14C00F8B0FE /* AtmosphericEventsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmosphericEventsCardView.swift; sourceTree = "<group>"; };
+		400017E228D0FC0B00F8B0FE /* HourlyWeatherForecastRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherForecastRequest.swift; sourceTree = "<group>"; };
+		400017E428D0FE5C00F8B0FE /* CityByLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityByLocationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +255,7 @@
 			children = (
 				400017BC28D0B1EC00F8B0FE /* DailyForecastRequest.swift */,
 				400017B928D0B10000F8B0FE /* AccuWeatherNetworkConstants.swift */,
+				400017E228D0FC0B00F8B0FE /* HourlyWeatherForecastRequest.swift */,
 			);
 			path = "Weather Api";
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			children = (
 				400017C728D0D4FE00F8B0FE /* WeatherForecastHourlyModel.swift */,
 				400017C928D0D58A00F8B0FE /* WeatherForecastDaily.swift */,
+				400017E428D0FE5C00F8B0FE /* CityByLocationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 		400017CB28D0DD6400F8B0FE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				400017E028D0F9F700F8B0FE /* Hourly Weather Info */,
 				400017CC28D0DD6900F8B0FE /* Weather Detailized Component */,
 			);
 			path = Components;
@@ -327,6 +334,21 @@
 				400017DE28D0F14C00F8B0FE /* AtmosphericEventsCardView.swift */,
 			);
 			path = "Atmospheric Events Card View";
+			sourceTree = "<group>";
+		};
+		400017E028D0F9F700F8B0FE /* Hourly Weather Info */ = {
+			isa = PBXGroup;
+			children = (
+				400017E128D0FA2F00F8B0FE /* Cell */,
+			);
+			path = "Hourly Weather Info";
+			sourceTree = "<group>";
+		};
+		400017E128D0FA2F00F8B0FE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,10 +445,12 @@
 				400017D328D0E16300F8B0FE /* WeatherDetailComponent.swift in Sources */,
 				400017DF28D0F14C00F8B0FE /* AtmosphericEventsCardView.swift in Sources */,
 				400017C828D0D4FE00F8B0FE /* WeatherForecastHourlyModel.swift in Sources */,
+				400017E328D0FC0B00F8B0FE /* HourlyWeatherForecastRequest.swift in Sources */,
 				400017AF28D0AD5800F8B0FE /* NetworkManager.swift in Sources */,
 				400017C228D0CC0E00F8B0FE /* MainPageViewModel.swift in Sources */,
 				4000178328D09E6E00F8B0FE /* BaseLabel.swift in Sources */,
 				4000178C28D09E8A00F8B0FE /* UIView+Extension.swift in Sources */,
+				400017E528D0FE5C00F8B0FE /* CityByLocationModel.swift in Sources */,
 				400017C028D0CBF800F8B0FE /* MainPageViewController.swift in Sources */,
 				4000179828D09EB300F8B0FE /* LocationEnum.swift in Sources */,
 				400017BD28D0B1EC00F8B0FE /* DailyForecastRequest.swift in Sources */,

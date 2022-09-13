@@ -31,7 +31,7 @@ class WeatherDetailComponent: GenericBaseView<WeatherDetailData> {
     
     private lazy var temperatureContainerView: UIStackView = {
         let temp = UIStackView()
-        temp.axis = .horizontal
+        temp.axis = .vertical
         temp.distribution = .fill
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
@@ -39,6 +39,8 @@ class WeatherDetailComponent: GenericBaseView<WeatherDetailData> {
     
     private lazy var temperatureValue: BaseLabel = {
         let temp = BaseLabel()
+        temp.textAlignment = .center
+        temp.font = UIFont.boldSystemFont(ofSize: 40)
         temp.textColor = .black
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
@@ -46,6 +48,8 @@ class WeatherDetailComponent: GenericBaseView<WeatherDetailData> {
     
     private lazy var weatherPhase: BaseLabel = {
         let temp = BaseLabel()
+        temp.textAlignment = .center
+        temp.font = UIFont.systemFont(ofSize: 25)
         temp.textColor = .black
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
@@ -66,6 +70,8 @@ class WeatherDetailComponent: GenericBaseView<WeatherDetailData> {
             containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            weatherImage.heightAnchor.constraint(equalToConstant: 120.0)
         ])
     }
     

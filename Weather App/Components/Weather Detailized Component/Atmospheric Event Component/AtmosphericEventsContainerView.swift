@@ -10,8 +10,8 @@ import UIKit
 
 class AtmosphericEventsContainerView: GenericBaseView<AtmosphericEventsData> {
     // MARK: Constants
-    private let eventInfoSpacingValue: CGFloat = 10.0
-    private let frameValue: CGFloat = 5.0
+    private let eventInfoSpacingValue: CGFloat = 20.0
+    private let frameValue: CGFloat = 15.0
     
     // MARK: Components
     private lazy var containerStackView: UIStackView = {
@@ -32,6 +32,8 @@ class AtmosphericEventsContainerView: GenericBaseView<AtmosphericEventsData> {
     
     private lazy var eventImage: UIImageView = {
         let temp = UIImageView()
+        temp.clipsToBounds = true
+        temp.layer.cornerRadius = 20
         temp.contentMode = .scaleAspectFill
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
@@ -47,13 +49,15 @@ class AtmosphericEventsContainerView: GenericBaseView<AtmosphericEventsData> {
     private lazy var eventValue: BaseLabel = {
         let temp = BaseLabel()
         temp.textColor = .black
+        temp.textAlignment = .right
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
     }()
     
     // MARK: Override Methods
     override func addMajorViewComponents() {
-        layer.cornerRadius = 10.0
+        layer.cornerRadius = 30.0
+        backgroundColor = UIColor(r: 255, g: 255, b: 255, alpha: 0.5)
         
         addSubview(containerStackView)
         
@@ -67,8 +71,11 @@ class AtmosphericEventsContainerView: GenericBaseView<AtmosphericEventsData> {
         NSLayoutConstraint.activate([
             containerStackView.topAnchor.constraint(equalTo: topAnchor, constant: frameValue),
             containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: frameValue),
-            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: frameValue),
-            containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: frameValue),
+            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -(frameValue * 3)),
+            containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -frameValue),
+            
+            eventImage.heightAnchor.constraint(equalToConstant: 50.0),
+            eventImage.widthAnchor.constraint(equalToConstant: 50.0)
         ])
     }
     

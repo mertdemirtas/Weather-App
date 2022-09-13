@@ -10,7 +10,7 @@ import UIKit
 
 class WeatherContainerView: GenericBaseView<WeatherContainerViewData> {
     // MARK: Constants
-    private let spacingValue: CGFloat = 10.0
+    private let spacingValue: CGFloat = 20.0
     
     // MARK: Components
     private lazy var containerStackView: UIStackView = {
@@ -26,7 +26,7 @@ class WeatherContainerView: GenericBaseView<WeatherContainerViewData> {
         let temp = BaseLabel()
         temp.textColor = .darkGray
         temp.font = UIFont.systemFont(ofSize: 18)
-        temp.numberOfLines = 1
+        temp.heightAnchor.constraint(equalToConstant: 30.0).isActive = true
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
     }()
@@ -53,8 +53,8 @@ class WeatherContainerView: GenericBaseView<WeatherContainerViewData> {
         
         NSLayoutConstraint.activate([
             containerStackView.topAnchor.constraint(equalTo: topAnchor),
-            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20.0),
+            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20.0),
             containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
