@@ -46,6 +46,14 @@
 		400017C528D0CC5300F8B0FE /* MainPageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017C428D0CC5300F8B0FE /* MainPageBuilder.swift */; };
 		400017C828D0D4FE00F8B0FE /* WeatherForecastHourlyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017C728D0D4FE00F8B0FE /* WeatherForecastHourlyModel.swift */; };
 		400017CA28D0D58A00F8B0FE /* WeatherForecastDaily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017C928D0D58A00F8B0FE /* WeatherForecastDaily.swift */; };
+		400017CE28D0DDC100F8B0FE /* WeatherContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017CD28D0DDC100F8B0FE /* WeatherContainerView.swift */; };
+		400017D028D0DDDE00F8B0FE /* WeatherContainerViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017CF28D0DDDE00F8B0FE /* WeatherContainerViewData.swift */; };
+		400017D328D0E16300F8B0FE /* WeatherDetailComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017D228D0E16300F8B0FE /* WeatherDetailComponent.swift */; };
+		400017D528D0E17A00F8B0FE /* WeatherDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017D428D0E17A00F8B0FE /* WeatherDetailData.swift */; };
+		400017D828D0E3A800F8B0FE /* AtmosphericEventsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017D728D0E3A800F8B0FE /* AtmosphericEventsContainerView.swift */; };
+		400017DA28D0E3F800F8B0FE /* AtmosphericEventsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017D928D0E3F800F8B0FE /* AtmosphericEventsData.swift */; };
+		400017DD28D0F13200F8B0FE /* AtmosphericEventsCardViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017DC28D0F13200F8B0FE /* AtmosphericEventsCardViewData.swift */; };
+		400017DF28D0F14C00F8B0FE /* AtmosphericEventsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017DE28D0F14C00F8B0FE /* AtmosphericEventsCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +93,14 @@
 		400017C428D0CC5300F8B0FE /* MainPageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageBuilder.swift; sourceTree = "<group>"; };
 		400017C728D0D4FE00F8B0FE /* WeatherForecastHourlyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastHourlyModel.swift; sourceTree = "<group>"; };
 		400017C928D0D58A00F8B0FE /* WeatherForecastDaily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastDaily.swift; sourceTree = "<group>"; };
+		400017CD28D0DDC100F8B0FE /* WeatherContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherContainerView.swift; sourceTree = "<group>"; };
+		400017CF28D0DDDE00F8B0FE /* WeatherContainerViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherContainerViewData.swift; sourceTree = "<group>"; };
+		400017D228D0E16300F8B0FE /* WeatherDetailComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailComponent.swift; sourceTree = "<group>"; };
+		400017D428D0E17A00F8B0FE /* WeatherDetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailData.swift; sourceTree = "<group>"; };
+		400017D728D0E3A800F8B0FE /* AtmosphericEventsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmosphericEventsContainerView.swift; sourceTree = "<group>"; };
+		400017D928D0E3F800F8B0FE /* AtmosphericEventsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmosphericEventsData.swift; sourceTree = "<group>"; };
+		400017DC28D0F13200F8B0FE /* AtmosphericEventsCardViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmosphericEventsCardViewData.swift; sourceTree = "<group>"; };
+		400017DE28D0F14C00F8B0FE /* AtmosphericEventsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmosphericEventsCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +138,7 @@
 		4000175628D09D6C00F8B0FE /* Weather App */ = {
 			isa = PBXGroup;
 			children = (
+				400017CB28D0DD6400F8B0FE /* Components */,
 				400017AC28D0A13A00F8B0FE /* Network */,
 				4000176F28D09D8800F8B0FE /* Assets */,
 				4000176E28D09D7E00F8B0FE /* App Files */,
@@ -265,6 +282,53 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		400017CB28D0DD6400F8B0FE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				400017CC28D0DD6900F8B0FE /* Weather Detailized Component */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		400017CC28D0DD6900F8B0FE /* Weather Detailized Component */ = {
+			isa = PBXGroup;
+			children = (
+				400017DB28D0F11100F8B0FE /* Atmospheric Events Card View */,
+				400017D628D0E38A00F8B0FE /* Atmospheric Event Component */,
+				400017D128D0E14000F8B0FE /* Weather Detail Component */,
+				400017CD28D0DDC100F8B0FE /* WeatherContainerView.swift */,
+				400017CF28D0DDDE00F8B0FE /* WeatherContainerViewData.swift */,
+			);
+			path = "Weather Detailized Component";
+			sourceTree = "<group>";
+		};
+		400017D128D0E14000F8B0FE /* Weather Detail Component */ = {
+			isa = PBXGroup;
+			children = (
+				400017D228D0E16300F8B0FE /* WeatherDetailComponent.swift */,
+				400017D428D0E17A00F8B0FE /* WeatherDetailData.swift */,
+			);
+			path = "Weather Detail Component";
+			sourceTree = "<group>";
+		};
+		400017D628D0E38A00F8B0FE /* Atmospheric Event Component */ = {
+			isa = PBXGroup;
+			children = (
+				400017D728D0E3A800F8B0FE /* AtmosphericEventsContainerView.swift */,
+				400017D928D0E3F800F8B0FE /* AtmosphericEventsData.swift */,
+			);
+			path = "Atmospheric Event Component";
+			sourceTree = "<group>";
+		};
+		400017DB28D0F11100F8B0FE /* Atmospheric Events Card View */ = {
+			isa = PBXGroup;
+			children = (
+				400017DC28D0F13200F8B0FE /* AtmosphericEventsCardViewData.swift */,
+				400017DE28D0F14C00F8B0FE /* AtmosphericEventsCardView.swift */,
+			);
+			path = "Atmospheric Events Card View";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,12 +410,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				400017D028D0DDDE00F8B0FE /* WeatherContainerViewData.swift in Sources */,
 				400017B528D0AD9800F8B0FE /* Endpoint.swift in Sources */,
 				400017B128D0AD7300F8B0FE /* HttpMethods.swift in Sources */,
+				400017D528D0E17A00F8B0FE /* WeatherDetailData.swift in Sources */,
 				4000178728D09E6E00F8B0FE /* BaseButton.swift in Sources */,
+				400017DD28D0F13200F8B0FE /* AtmosphericEventsCardViewData.swift in Sources */,
 				4000179D28D09EC100F8B0FE /* GenericDataProtocol.swift in Sources */,
 				400017B328D0AD8900F8B0FE /* HTTPErrors.swift in Sources */,
+				400017CE28D0DDC100F8B0FE /* WeatherContainerView.swift in Sources */,
 				4000178028D09E6E00F8B0FE /* AlertViewControllerContainerView.swift in Sources */,
+				400017D328D0E16300F8B0FE /* WeatherDetailComponent.swift in Sources */,
+				400017DF28D0F14C00F8B0FE /* AtmosphericEventsCardView.swift in Sources */,
 				400017C828D0D4FE00F8B0FE /* WeatherForecastHourlyModel.swift in Sources */,
 				400017AF28D0AD5800F8B0FE /* NetworkManager.swift in Sources */,
 				400017C228D0CC0E00F8B0FE /* MainPageViewModel.swift in Sources */,
@@ -371,10 +441,12 @@
 				400017B728D0B05600F8B0FE /* NetworkConstants.swift in Sources */,
 				4000178528D09E6E00F8B0FE /* GenericTableViewCell.swift in Sources */,
 				4000178128D09E6E00F8B0FE /* AlertViewData.swift in Sources */,
+				400017D828D0E3A800F8B0FE /* AtmosphericEventsContainerView.swift in Sources */,
 				4000177F28D09E6E00F8B0FE /* BaseTwoButtonAlertViewController.swift in Sources */,
 				4000179728D09EB300F8B0FE /* LocationCoordinates.swift in Sources */,
 				4000179A28D09EB300F8B0FE /* LocationManager.swift in Sources */,
 				4000175828D09D6C00F8B0FE /* AppDelegate.swift in Sources */,
+				400017DA28D0E3F800F8B0FE /* AtmosphericEventsData.swift in Sources */,
 				4000177D28D09E6E00F8B0FE /* BaseViewController.swift in Sources */,
 				400017C528D0CC5300F8B0FE /* MainPageBuilder.swift in Sources */,
 				400017BA28D0B10000F8B0FE /* AccuWeatherNetworkConstants.swift in Sources */,
