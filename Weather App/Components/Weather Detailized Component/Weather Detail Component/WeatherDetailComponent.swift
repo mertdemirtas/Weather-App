@@ -78,7 +78,7 @@ class WeatherDetailComponent: GenericBaseView<WeatherDetailData> {
     override func loadDataView() {
         guard let data = returnData() else { return }
         weatherImage.image = UIImage(named: String(data.imageNumber))
-        temperatureValue.text = String(data.temperatureValue)
+        temperatureValue.text = String(data.temperatureValue) + "°"
         weatherPhase.text = data.weatherPhase
     }
 }

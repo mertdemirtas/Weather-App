@@ -58,8 +58,8 @@ class AtmosphericEventsCardView: GenericBaseView<AtmosphericEventsCardViewData> 
     
     override func loadDataView() {
         guard let data = returnData() else { return }
-        rainContainerView.setData(by: AtmosphericEventsData(image: "rain", name: "Rain Fall", value: String(data.rainValue)))
-        humidityContainerView.setData(by: AtmosphericEventsData(image: "humidity", name: "Humidity", value: String(data.humidityValue)))
-        windContainerView.setData(by: AtmosphericEventsData(image: "wind", name: "Wind", value: String(data.windValue)))
+        rainContainerView.setData(by: AtmosphericEventsData(image: "rain", name: "Rain Fall", value: String(data.rainValue) + "%"))
+        humidityContainerView.setData(by: AtmosphericEventsData(image: "humidity", name: "Humidity", value: String(data.humidityValue) + "%"))
+        windContainerView.setData(by: AtmosphericEventsData(image: "wind", name: "Wind", value: String(data.windValue) + "km/h"))
     }
 }
