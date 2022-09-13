@@ -11,6 +11,29 @@
 		4000176228D09D6C00F8B0FE /* Weather_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4000176028D09D6C00F8B0FE /* Weather_App.xcdatamodeld */; };
 		4000176428D09D6E00F8B0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4000176328D09D6E00F8B0FE /* Assets.xcassets */; };
 		4000176728D09D6E00F8B0FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4000176528D09D6E00F8B0FE /* LaunchScreen.storyboard */; };
+		4000177D28D09E6E00F8B0FE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000177128D09E6E00F8B0FE /* BaseViewController.swift */; };
+		4000177E28D09E6E00F8B0FE /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000177228D09E6E00F8B0FE /* BaseTableViewCell.swift */; };
+		4000177F28D09E6E00F8B0FE /* BaseTwoButtonAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000177428D09E6E00F8B0FE /* BaseTwoButtonAlertViewController.swift */; };
+		4000178028D09E6E00F8B0FE /* AlertViewControllerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000177528D09E6E00F8B0FE /* AlertViewControllerContainerView.swift */; };
+		4000178128D09E6E00F8B0FE /* AlertViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000177628D09E6E00F8B0FE /* AlertViewData.swift */; };
+		4000178228D09E6E00F8B0FE /* GenericBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000177728D09E6E00F8B0FE /* GenericBaseView.swift */; };
+		4000178328D09E6E00F8B0FE /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000177828D09E6E00F8B0FE /* BaseLabel.swift */; };
+		4000178428D09E6E00F8B0FE /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000177928D09E6E00F8B0FE /* BaseTableView.swift */; };
+		4000178528D09E6E00F8B0FE /* GenericTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000177A28D09E6E00F8B0FE /* GenericTableViewCell.swift */; };
+		4000178628D09E6E00F8B0FE /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000177B28D09E6E00F8B0FE /* BaseView.swift */; };
+		4000178728D09E6E00F8B0FE /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000177C28D09E6E00F8B0FE /* BaseButton.swift */; };
+		4000178B28D09E8A00F8B0FE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000178928D09E8A00F8B0FE /* UIColor+Extension.swift */; };
+		4000178C28D09E8A00F8B0FE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000178A28D09E8A00F8B0FE /* UIView+Extension.swift */; };
+		4000179728D09EB300F8B0FE /* LocationCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000179128D09EB300F8B0FE /* LocationCoordinates.swift */; };
+		4000179828D09EB300F8B0FE /* LocationEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000179228D09EB300F8B0FE /* LocationEnum.swift */; };
+		4000179A28D09EB300F8B0FE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000179428D09EB300F8B0FE /* LocationManager.swift */; };
+		4000179D28D09EC100F8B0FE /* GenericDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000179B28D09EC100F8B0FE /* GenericDataProtocol.swift */; };
+		4000179E28D09EC100F8B0FE /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000179C28D09EC100F8B0FE /* BaseViewModel.swift */; };
+		400017A128D09EDE00F8B0FE /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 400017A028D09EDE00F8B0FE /* RxBlocking */; };
+		400017A328D09EDE00F8B0FE /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 400017A228D09EDE00F8B0FE /* RxCocoa */; };
+		400017A528D09EDE00F8B0FE /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 400017A428D09EDE00F8B0FE /* RxRelay */; };
+		400017A728D09EDE00F8B0FE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 400017A628D09EDE00F8B0FE /* RxSwift */; };
+		400017AA28D09EE900F8B0FE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 400017A928D09EE900F8B0FE /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +43,24 @@
 		4000176328D09D6E00F8B0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4000176628D09D6E00F8B0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4000176828D09D6E00F8B0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4000177128D09E6E00F8B0FE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4000177228D09E6E00F8B0FE /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		4000177428D09E6E00F8B0FE /* BaseTwoButtonAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTwoButtonAlertViewController.swift; sourceTree = "<group>"; };
+		4000177528D09E6E00F8B0FE /* AlertViewControllerContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewControllerContainerView.swift; sourceTree = "<group>"; };
+		4000177628D09E6E00F8B0FE /* AlertViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewData.swift; sourceTree = "<group>"; };
+		4000177728D09E6E00F8B0FE /* GenericBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericBaseView.swift; sourceTree = "<group>"; };
+		4000177828D09E6E00F8B0FE /* BaseLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
+		4000177928D09E6E00F8B0FE /* BaseTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
+		4000177A28D09E6E00F8B0FE /* GenericTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTableViewCell.swift; sourceTree = "<group>"; };
+		4000177B28D09E6E00F8B0FE /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		4000177C28D09E6E00F8B0FE /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		4000178928D09E8A00F8B0FE /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		4000178A28D09E8A00F8B0FE /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		4000179128D09EB300F8B0FE /* LocationCoordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCoordinates.swift; sourceTree = "<group>"; };
+		4000179228D09EB300F8B0FE /* LocationEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationEnum.swift; sourceTree = "<group>"; };
+		4000179428D09EB300F8B0FE /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		4000179B28D09EC100F8B0FE /* GenericDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataProtocol.swift; sourceTree = "<group>"; };
+		4000179C28D09EC100F8B0FE /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +68,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				400017AA28D09EE900F8B0FE /* Alamofire in Frameworks */,
+				400017A528D09EDE00F8B0FE /* RxRelay in Frameworks */,
+				400017A328D09EDE00F8B0FE /* RxCocoa in Frameworks */,
+				400017A728D09EDE00F8B0FE /* RxSwift in Frameworks */,
+				400017A128D09EDE00F8B0FE /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +100,9 @@
 			children = (
 				4000176F28D09D8800F8B0FE /* Assets */,
 				4000176E28D09D7E00F8B0FE /* App Files */,
+				4000178D28D09E9700F8B0FE /* Support Files */,
+				4000177028D09E6E00F8B0FE /* Base Components */,
+				4000178828D09E8A00F8B0FE /* Extensions */,
 				4000176528D09D6E00F8B0FE /* LaunchScreen.storyboard */,
 				4000176828D09D6E00F8B0FE /* Info.plist */,
 				4000176028D09D6C00F8B0FE /* Weather_App.xcdatamodeld */,
@@ -77,6 +126,61 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		4000177028D09E6E00F8B0FE /* Base Components */ = {
+			isa = PBXGroup;
+			children = (
+				4000177128D09E6E00F8B0FE /* BaseViewController.swift */,
+				4000177228D09E6E00F8B0FE /* BaseTableViewCell.swift */,
+				4000177328D09E6E00F8B0FE /* Base Alert Controller */,
+				4000177728D09E6E00F8B0FE /* GenericBaseView.swift */,
+				4000177828D09E6E00F8B0FE /* BaseLabel.swift */,
+				4000177928D09E6E00F8B0FE /* BaseTableView.swift */,
+				4000177A28D09E6E00F8B0FE /* GenericTableViewCell.swift */,
+				4000177B28D09E6E00F8B0FE /* BaseView.swift */,
+				4000177C28D09E6E00F8B0FE /* BaseButton.swift */,
+			);
+			path = "Base Components";
+			sourceTree = "<group>";
+		};
+		4000177328D09E6E00F8B0FE /* Base Alert Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4000177428D09E6E00F8B0FE /* BaseTwoButtonAlertViewController.swift */,
+				4000177528D09E6E00F8B0FE /* AlertViewControllerContainerView.swift */,
+				4000177628D09E6E00F8B0FE /* AlertViewData.swift */,
+			);
+			path = "Base Alert Controller";
+			sourceTree = "<group>";
+		};
+		4000178828D09E8A00F8B0FE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4000178928D09E8A00F8B0FE /* UIColor+Extension.swift */,
+				4000178A28D09E8A00F8B0FE /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4000178D28D09E9700F8B0FE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4000179C28D09EC100F8B0FE /* BaseViewModel.swift */,
+				4000179B28D09EC100F8B0FE /* GenericDataProtocol.swift */,
+				4000178E28D09EB300F8B0FE /* LocationManager */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		4000178E28D09EB300F8B0FE /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				4000179128D09EB300F8B0FE /* LocationCoordinates.swift */,
+				4000179228D09EB300F8B0FE /* LocationEnum.swift */,
+				4000179428D09EB300F8B0FE /* LocationManager.swift */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -93,6 +197,13 @@
 			dependencies = (
 			);
 			name = "Weather App";
+			packageProductDependencies = (
+				400017A028D09EDE00F8B0FE /* RxBlocking */,
+				400017A228D09EDE00F8B0FE /* RxCocoa */,
+				400017A428D09EDE00F8B0FE /* RxRelay */,
+				400017A628D09EDE00F8B0FE /* RxSwift */,
+				400017A928D09EE900F8B0FE /* Alamofire */,
+			);
 			productName = "Weather App";
 			productReference = 4000175428D09D6C00F8B0FE /* Weather App.app */;
 			productType = "com.apple.product-type.application";
@@ -121,6 +232,10 @@
 				Base,
 			);
 			mainGroup = 4000174B28D09D6C00F8B0FE;
+			packageReferences = (
+				4000179F28D09EDE00F8B0FE /* XCRemoteSwiftPackageReference "RxSwift" */,
+				400017A828D09EE900F8B0FE /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 4000175528D09D6C00F8B0FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,8 +262,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4000178728D09E6E00F8B0FE /* BaseButton.swift in Sources */,
+				4000179D28D09EC100F8B0FE /* GenericDataProtocol.swift in Sources */,
+				4000178028D09E6E00F8B0FE /* AlertViewControllerContainerView.swift in Sources */,
+				4000178328D09E6E00F8B0FE /* BaseLabel.swift in Sources */,
+				4000178C28D09E8A00F8B0FE /* UIView+Extension.swift in Sources */,
+				4000179828D09EB300F8B0FE /* LocationEnum.swift in Sources */,
+				4000177E28D09E6E00F8B0FE /* BaseTableViewCell.swift in Sources */,
+				4000178628D09E6E00F8B0FE /* BaseView.swift in Sources */,
 				4000176228D09D6C00F8B0FE /* Weather_App.xcdatamodeld in Sources */,
+				4000178428D09E6E00F8B0FE /* BaseTableView.swift in Sources */,
+				4000178B28D09E8A00F8B0FE /* UIColor+Extension.swift in Sources */,
+				4000178228D09E6E00F8B0FE /* GenericBaseView.swift in Sources */,
+				4000179E28D09EC100F8B0FE /* BaseViewModel.swift in Sources */,
+				4000178528D09E6E00F8B0FE /* GenericTableViewCell.swift in Sources */,
+				4000178128D09E6E00F8B0FE /* AlertViewData.swift in Sources */,
+				4000177F28D09E6E00F8B0FE /* BaseTwoButtonAlertViewController.swift in Sources */,
+				4000179728D09EB300F8B0FE /* LocationCoordinates.swift in Sources */,
+				4000179A28D09EB300F8B0FE /* LocationManager.swift in Sources */,
 				4000175828D09D6C00F8B0FE /* AppDelegate.swift in Sources */,
+				4000177D28D09E6E00F8B0FE /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -358,6 +491,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4000179F28D09EDE00F8B0FE /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		400017A828D09EE900F8B0FE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		400017A028D09EDE00F8B0FE /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4000179F28D09EDE00F8B0FE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		400017A228D09EDE00F8B0FE /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4000179F28D09EDE00F8B0FE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		400017A428D09EDE00F8B0FE /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4000179F28D09EDE00F8B0FE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		400017A628D09EDE00F8B0FE /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4000179F28D09EDE00F8B0FE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		400017A928D09EE900F8B0FE /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 400017A828D09EE900F8B0FE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4000176028D09D6C00F8B0FE /* Weather_App.xcdatamodeld */ = {
