@@ -34,6 +34,13 @@
 		400017A528D09EDE00F8B0FE /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 400017A428D09EDE00F8B0FE /* RxRelay */; };
 		400017A728D09EDE00F8B0FE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 400017A628D09EDE00F8B0FE /* RxSwift */; };
 		400017AA28D09EE900F8B0FE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 400017A928D09EE900F8B0FE /* Alamofire */; };
+		400017AF28D0AD5800F8B0FE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017AE28D0AD5800F8B0FE /* NetworkManager.swift */; };
+		400017B128D0AD7300F8B0FE /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017B028D0AD7300F8B0FE /* HttpMethods.swift */; };
+		400017B328D0AD8900F8B0FE /* HTTPErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017B228D0AD8900F8B0FE /* HTTPErrors.swift */; };
+		400017B528D0AD9800F8B0FE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017B428D0AD9800F8B0FE /* Endpoint.swift */; };
+		400017B728D0B05600F8B0FE /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017B628D0B05600F8B0FE /* NetworkConstants.swift */; };
+		400017BA28D0B10000F8B0FE /* AccuWeatherNetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017B928D0B10000F8B0FE /* AccuWeatherNetworkConstants.swift */; };
+		400017BD28D0B1EC00F8B0FE /* DailyForecastRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017BC28D0B1EC00F8B0FE /* DailyForecastRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +68,13 @@
 		4000179428D09EB300F8B0FE /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4000179B28D09EC100F8B0FE /* GenericDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataProtocol.swift; sourceTree = "<group>"; };
 		4000179C28D09EC100F8B0FE /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		400017AE28D0AD5800F8B0FE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		400017B028D0AD7300F8B0FE /* HttpMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
+		400017B228D0AD8900F8B0FE /* HTTPErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPErrors.swift; sourceTree = "<group>"; };
+		400017B428D0AD9800F8B0FE /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		400017B628D0B05600F8B0FE /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		400017B928D0B10000F8B0FE /* AccuWeatherNetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuWeatherNetworkConstants.swift; sourceTree = "<group>"; };
+		400017BC28D0B1EC00F8B0FE /* DailyForecastRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +112,7 @@
 		4000175628D09D6C00F8B0FE /* Weather App */ = {
 			isa = PBXGroup;
 			children = (
+				400017AC28D0A13A00F8B0FE /* Network */,
 				4000176F28D09D8800F8B0FE /* Assets */,
 				4000176E28D09D7E00F8B0FE /* App Files */,
 				4000178D28D09E9700F8B0FE /* Support Files */,
@@ -181,6 +196,36 @@
 			path = LocationManager;
 			sourceTree = "<group>";
 		};
+		400017AC28D0A13A00F8B0FE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				400017B828D0B0E600F8B0FE /* Weather Api */,
+				400017AD28D0AD4800F8B0FE /* Manager */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		400017AD28D0AD4800F8B0FE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				400017AE28D0AD5800F8B0FE /* NetworkManager.swift */,
+				400017B028D0AD7300F8B0FE /* HttpMethods.swift */,
+				400017B228D0AD8900F8B0FE /* HTTPErrors.swift */,
+				400017B428D0AD9800F8B0FE /* Endpoint.swift */,
+				400017B628D0B05600F8B0FE /* NetworkConstants.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		400017B828D0B0E600F8B0FE /* Weather Api */ = {
+			isa = PBXGroup;
+			children = (
+				400017BC28D0B1EC00F8B0FE /* DailyForecastRequest.swift */,
+				400017B928D0B10000F8B0FE /* AccuWeatherNetworkConstants.swift */,
+			);
+			path = "Weather Api";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,12 +307,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				400017B528D0AD9800F8B0FE /* Endpoint.swift in Sources */,
+				400017B128D0AD7300F8B0FE /* HttpMethods.swift in Sources */,
 				4000178728D09E6E00F8B0FE /* BaseButton.swift in Sources */,
 				4000179D28D09EC100F8B0FE /* GenericDataProtocol.swift in Sources */,
+				400017B328D0AD8900F8B0FE /* HTTPErrors.swift in Sources */,
 				4000178028D09E6E00F8B0FE /* AlertViewControllerContainerView.swift in Sources */,
+				400017AF28D0AD5800F8B0FE /* NetworkManager.swift in Sources */,
 				4000178328D09E6E00F8B0FE /* BaseLabel.swift in Sources */,
 				4000178C28D09E8A00F8B0FE /* UIView+Extension.swift in Sources */,
 				4000179828D09EB300F8B0FE /* LocationEnum.swift in Sources */,
+				400017BD28D0B1EC00F8B0FE /* DailyForecastRequest.swift in Sources */,
 				4000177E28D09E6E00F8B0FE /* BaseTableViewCell.swift in Sources */,
 				4000178628D09E6E00F8B0FE /* BaseView.swift in Sources */,
 				4000176228D09D6C00F8B0FE /* Weather_App.xcdatamodeld in Sources */,
@@ -275,6 +325,7 @@
 				4000178B28D09E8A00F8B0FE /* UIColor+Extension.swift in Sources */,
 				4000178228D09E6E00F8B0FE /* GenericBaseView.swift in Sources */,
 				4000179E28D09EC100F8B0FE /* BaseViewModel.swift in Sources */,
+				400017B728D0B05600F8B0FE /* NetworkConstants.swift in Sources */,
 				4000178528D09E6E00F8B0FE /* GenericTableViewCell.swift in Sources */,
 				4000178128D09E6E00F8B0FE /* AlertViewData.swift in Sources */,
 				4000177F28D09E6E00F8B0FE /* BaseTwoButtonAlertViewController.swift in Sources */,
@@ -282,6 +333,7 @@
 				4000179A28D09EB300F8B0FE /* LocationManager.swift in Sources */,
 				4000175828D09D6C00F8B0FE /* AppDelegate.swift in Sources */,
 				4000177D28D09E6E00F8B0FE /* BaseViewController.swift in Sources */,
+				400017BA28D0B10000F8B0FE /* AccuWeatherNetworkConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
