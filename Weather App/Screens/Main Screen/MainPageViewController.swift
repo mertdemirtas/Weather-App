@@ -16,18 +16,12 @@ class MainPageViewController: BaseViewController<MainPageViewModel> {
         return temp
     }()
     
-    private let locationManager = LocationManager()
-
-    // MARK: Lifecycle
-    override func viewWillAppear(_ animated: Bool) {
-        locationManager.requestLocationPermission()
-        super.viewWillAppear(true)
-    }
     
+    // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.getData()
-        viewModel.dataClosure = { [weak self] result in
+        viewModel.completion = { [weak self] result in
             self?.weatherContainerView.setData(by: result)
         }
     }

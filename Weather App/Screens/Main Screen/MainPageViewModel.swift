@@ -12,7 +12,7 @@ class MainPageViewModel: BaseViewModel {
     private let networkManager = NetworkManager()
     private let locationManager = LocationManager()
     public var status: LocationEnum?
-    var dataClosure: ((WeatherContainerViewData) -> (Void))?
+    var completion: ((WeatherContainerViewData) -> (Void))?
     
     
     public func requestLocationPermission() {
@@ -53,12 +53,12 @@ class MainPageViewModel: BaseViewModel {
     
     private func getWeatherData(request: Endpoint) {
         networkManager.request(from: request, completionHandler: { [weak self] (result: WeatherForecastHourlyModel) in
-            print(result)
             self?.bindData(result: result)
         })
     }
     
     private func bindData(result: WeatherForecastHourlyModel) {
-        //print(result)
+        let formattedResult = MainPageFormatter.formatDataToWeatherContainerViewData(data: result)
+        completion?(formattedResult)
     }
 }

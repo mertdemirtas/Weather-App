@@ -8,7 +8,7 @@
 import Foundation
 
 struct AtmosphericEventsCardViewData {
-    let rainValue: Double
-    let humidityValue: Double
+    let rainValue: Int
+    let humidityValue: Int
     let windValue: Double
 }
