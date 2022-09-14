@@ -21,7 +21,6 @@ class MainPageViewController: BaseViewController<MainPageViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.getData()
-        Locale.current.languageCode
         viewModel.completion = { [weak self] result in
             self?.weatherContainerView.setData(by: result)
             self?.weatherContainerView.hourlyWeatherCardView.reloadData()
