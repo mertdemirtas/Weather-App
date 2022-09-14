@@ -15,15 +15,15 @@ class HourlyWeatherForecastRequest: Endpoint {
     var headers: HTTPHeaders? = nil
     var body: [String : Any]?
     
-    private var locationID: Int
+    private var locationID: String
     
-    init(locationID: Int) {
+    init(locationID: String) {
         self.locationID = locationID
         preparePath()
     }
     
     private func preparePath() {
-        path = "forecasts/v1/hourly/12hour/" + "\(locationID)" + "?\(networkConstants.apiKey)" + "&details=true&metric=true"
+        path = "forecasts/v1/hourly/12hour/" + "\(locationID)" + "?apikey=\(networkConstants.apiKey)" + "&details=true&metric=true"
     }
 }
 

@@ -14,9 +14,9 @@ import Foundation
 
 // MARK: - WeatherForecastHourlyModelElement
 struct WeatherForecastHourlyModelElement: Codable {
-    let dateTime: Date?
+    let dateTime: String?
     let epochDateTime, weatherIcon: Int?
-    let iconPhrase: IconPhrase?
+    let iconPhrase: String?
     let hasPrecipitation, isDaylight: Bool?
     let temperature, realFeelTemperature, realFeelTemperatureShade, wetBulbTemperature: Ceiling?
     let dewPoint: Ceiling?
@@ -25,7 +25,7 @@ struct WeatherForecastHourlyModelElement: Codable {
     let relativeHumidity, indoorRelativeHumidity: Int?
     let visibility, ceiling: Ceiling?
     let uvIndex: Int?
-    let uvIndexText: UVIndexText?
+    let uvIndexText: String?
     let precipitationProbability, thunderstormProbability, rainProbability, snowProbability: Int?
     let iceProbability: Int?
     let totalLiquid, rain, snow, ice: Ceiling?
@@ -75,7 +75,7 @@ struct Ceiling: Codable {
     let value: Double?
     let unit: Unit?
     let unitType: Int?
-    let phrase: Phrase?
+    let phrase: String?
 
     enum CodingKeys: String, CodingKey {
         case value = "Value"
@@ -83,11 +83,6 @@ struct Ceiling: Codable {
         case unitType = "UnitType"
         case phrase = "Phrase"
     }
-}
-
-enum Phrase: String, Codable {
-    case cool = "Cool"
-    case pleasant = "Pleasant"
 }
 
 enum Unit: String, Codable {
@@ -98,16 +93,6 @@ enum Unit: String, Codable {
     case m = "m"
     case mm = "mm"
     case wM = "W/m²"
-}
-
-enum IconPhrase: String, Codable {
-    case clear = "Clear"
-    case cloudy = "Cloudy"
-    case mostlyClear = "Mostly clear"
-}
-
-enum UVIndexText: String, Codable {
-    case low = "Low"
 }
 
 // MARK: - Wind

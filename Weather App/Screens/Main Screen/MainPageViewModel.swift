@@ -47,17 +47,18 @@ class MainPageViewModel: BaseViewModel {
     }
     
     private func prepareWeatherRequest(locationID: String?) {
-        let request = CurrentConditionsRequest(locationID: locationID ?? "")
+        let request = HourlyWeatherForecastRequest(locationID: "1284832")
         getWeatherData(request: request)
     }
     
     private func getWeatherData(request: Endpoint) {
-        networkManager.request(from: request, completionHandler: { [weak self] (result: CurrentConditionsModel) in
-            self?.bindData(data: result)
+        networkManager.request(from: request, completionHandler: { [weak self] (result: WeatherForecastHourlyModel) in
+            print(result)
+            self?.bindData(result: result)
         })
     }
     
-    private func bindData(data: CurrentConditionsModel) {
-        print(data)
+    private func bindData(result: WeatherForecastHourlyModel) {
+        //print(result)
     }
 }
