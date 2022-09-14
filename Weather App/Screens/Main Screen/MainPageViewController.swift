@@ -16,11 +16,20 @@ class MainPageViewController: BaseViewController<MainPageViewModel> {
         return temp
     }()
     
-    
+    private let locationManager = LocationManager()
+
     // MARK: Lifecycle
+    override func viewWillAppear(_ animated: Bool) {
+        locationManager.requestLocationPermission()
+        super.viewWillAppear(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        weatherContainerView.setData(by: WeatherContainerViewData(date: "12 Haz 2022", detailData: WeatherDetailData(imageNumber: 1, temperatureValue: 21, weatherPhase: "Bulutlu"), atmosphericEventsData: AtmosphericEventsCardViewData(rainValue: 70, humidityValue: 23, windValue: 15)))
+        viewModel.getData()
+        viewModel.dataClosure = { [weak self] result in
+            self?.weatherContainerView.setData(by: result)
+        }
     }
     
     override func addViewComponents() {
@@ -30,6 +39,7 @@ class MainPageViewController: BaseViewController<MainPageViewModel> {
             weatherContainerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             weatherContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             weatherContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            weatherContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10.0)
         ])
     }
 }

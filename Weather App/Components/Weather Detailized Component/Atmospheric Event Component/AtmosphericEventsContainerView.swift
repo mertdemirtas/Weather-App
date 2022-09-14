@@ -16,7 +16,7 @@ class AtmosphericEventsContainerView: GenericBaseView<AtmosphericEventsData> {
     // MARK: Components
     private lazy var containerStackView: UIStackView = {
         let temp = UIStackView()
-        temp.distribution = .fillEqually
+        temp.distribution = .fill
         temp.axis = .horizontal
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
@@ -74,8 +74,8 @@ class AtmosphericEventsContainerView: GenericBaseView<AtmosphericEventsData> {
             containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -(frameValue * 3)),
             containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -frameValue),
             
-            eventImage.heightAnchor.constraint(equalToConstant: 50.0),
-            eventImage.widthAnchor.constraint(equalToConstant: 50.0)
+            eventImage.heightAnchor.constraint(equalToConstant: 40.0),
+            eventImage.widthAnchor.constraint(equalToConstant: 40.0)
         ])
     }
     

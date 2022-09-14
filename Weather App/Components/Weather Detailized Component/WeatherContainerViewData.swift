@@ -11,4 +11,5 @@ struct WeatherContainerViewData {
     let date: String
     let detailData: WeatherDetailData
     let atmosphericEventsData: AtmosphericEventsCardViewData
+    let hourlyWeatherData: HourlyWeatherCardViewData
 }

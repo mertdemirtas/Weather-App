@@ -43,6 +43,12 @@ class WeatherContainerView: GenericBaseView<WeatherContainerViewData> {
         return temp
     }()
     
+    lazy var hourlyWeatherCardView: HourlyWeatherCardView = {
+        let temp = HourlyWeatherCardView()
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        return temp
+    }()
+    
     // MARK: Override Methods
     override func addMajorViewComponents() {
         addSubview(containerStackView)
@@ -50,6 +56,7 @@ class WeatherContainerView: GenericBaseView<WeatherContainerViewData> {
         containerStackView.addArrangedSubview(dateLabel)
         containerStackView.addArrangedSubview(weatherDetailComponent)
         containerStackView.addArrangedSubview(atmosphericEventsCardViewComponent)
+        containerStackView.addArrangedSubview(hourlyWeatherCardView)
         
         NSLayoutConstraint.activate([
             containerStackView.topAnchor.constraint(equalTo: topAnchor),
@@ -64,5 +71,6 @@ class WeatherContainerView: GenericBaseView<WeatherContainerViewData> {
         dateLabel.text = data.date
         weatherDetailComponent.setData(by: data.detailData)
         atmosphericEventsCardViewComponent.setData(by: data.atmosphericEventsData)
+        hourlyWeatherCardView.setData(by: data.hourlyWeatherData)
     }
 }

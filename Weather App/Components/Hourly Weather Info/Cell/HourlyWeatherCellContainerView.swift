@@ -15,7 +15,7 @@ class HourlyWeatherCellContainerView: GenericBaseView<HourlyWeatherCellData> {
     // MARK: Components
     private lazy var containerStackView: UIStackView = {
         let temp = UIStackView()
-        temp.axis = .horizontal
+        temp.axis = .vertical
         temp.distribution = .fill
         temp.spacing = containerViewSpacingValue
         temp.translatesAutoresizingMaskIntoConstraints = false
@@ -24,6 +24,7 @@ class HourlyWeatherCellContainerView: GenericBaseView<HourlyWeatherCellData> {
     
     private lazy var timeLabel: BaseLabel = {
         let temp = BaseLabel()
+        temp.textAlignment = .center
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
     }()
@@ -37,6 +38,7 @@ class HourlyWeatherCellContainerView: GenericBaseView<HourlyWeatherCellData> {
     
     private lazy var temperatureLabel: BaseLabel = {
         let temp = BaseLabel()
+        temp.textAlignment = .center
         temp.font = UIFont.boldSystemFont(ofSize: 17)
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
@@ -44,6 +46,8 @@ class HourlyWeatherCellContainerView: GenericBaseView<HourlyWeatherCellData> {
     
     // MARK: Override Methods
     override func addMajorViewComponents() {
+        layer.cornerRadius = 35.0
+        backgroundColor = UIColor(r: 255, g: 255, b: 255, alpha: 0.5)
         addSubview(containerStackView)
         
         containerStackView.addArrangedSubview(timeLabel)
@@ -56,8 +60,8 @@ class HourlyWeatherCellContainerView: GenericBaseView<HourlyWeatherCellData> {
             containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10.0),
             containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10.0),
             
-            imageView.widthAnchor.constraint(equalToConstant: 40.0),
-            imageView.heightAnchor.constraint(equalToConstant: 40.0)
+            imageView.widthAnchor.constraint(equalToConstant: 60.0),
+            imageView.heightAnchor.constraint(equalToConstant: 60.0)
         ])
     }
     
