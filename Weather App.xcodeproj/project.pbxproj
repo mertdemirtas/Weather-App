@@ -69,6 +69,7 @@
 		400017FC28D14E2200F8B0FE /* CurrentConditionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017FB28D14E2100F8B0FE /* CurrentConditionsRequest.swift */; };
 		400017FE28D1528E00F8B0FE /* CurrentConditionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017FD28D1528E00F8B0FE /* CurrentConditionsModel.swift */; };
 		4000180028D1F16A00F8B0FE /* AccuWeatherIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 400017FF28D1F16A00F8B0FE /* AccuWeatherIcons.xcassets */; };
+		4000180228D2096800F8B0FE /* Locale+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000180128D2096800F8B0FE /* Locale+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -131,6 +132,7 @@
 		400017FB28D14E2100F8B0FE /* CurrentConditionsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionsRequest.swift; sourceTree = "<group>"; };
 		400017FD28D1528E00F8B0FE /* CurrentConditionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionsModel.swift; sourceTree = "<group>"; };
 		400017FF28D1F16A00F8B0FE /* AccuWeatherIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AccuWeatherIcons.xcassets; sourceTree = "<group>"; };
+		4000180128D2096800F8B0FE /* Locale+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		4000175628D09D6C00F8B0FE /* Weather App */ = {
 			isa = PBXGroup;
 			children = (
+				4000180328D20D7200F8B0FE /* Location */,
 				400017CB28D0DD6400F8B0FE /* Components */,
 				400017AC28D0A13A00F8B0FE /* Network */,
 				4000176F28D09D8800F8B0FE /* Assets */,
@@ -232,6 +235,7 @@
 		4000178828D09E8A00F8B0FE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4000180128D2096800F8B0FE /* Locale+Extension.swift */,
 				4000178928D09E8A00F8B0FE /* UIColor+Extension.swift */,
 				4000178A28D09E8A00F8B0FE /* UIView+Extension.swift */,
 			);
@@ -243,7 +247,6 @@
 			children = (
 				4000179C28D09EC100F8B0FE /* BaseViewModel.swift */,
 				4000179B28D09EC100F8B0FE /* GenericDataProtocol.swift */,
-				4000178E28D09EB300F8B0FE /* LocationManager */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -262,7 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				400017C628D0D4F200F8B0FE /* Models */,
-				400017B828D0B0E600F8B0FE /* Weather Api */,
+				400017B828D0B0E600F8B0FE /* Weather Api Requests */,
 				400017AD28D0AD4800F8B0FE /* Manager */,
 			);
 			path = Network;
@@ -280,7 +283,7 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		400017B828D0B0E600F8B0FE /* Weather Api */ = {
+		400017B828D0B0E600F8B0FE /* Weather Api Requests */ = {
 			isa = PBXGroup;
 			children = (
 				400017BC28D0B1EC00F8B0FE /* DailyForecastRequest.swift */,
@@ -289,7 +292,7 @@
 				400017F728D1390900F8B0FE /* SearchByLocationRequest.swift */,
 				400017FB28D14E2100F8B0FE /* CurrentConditionsRequest.swift */,
 			);
-			path = "Weather Api";
+			path = "Weather Api Requests";
 			sourceTree = "<group>";
 		};
 		400017BE28D0CBD900F8B0FE /* Screens */ = {
@@ -388,6 +391,14 @@
 				400017EB28D1147700F8B0FE /* HourlyWeatherCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		4000180328D20D7200F8B0FE /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				4000178E28D09EB300F8B0FE /* LocationManager */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,6 +506,7 @@
 				4000178328D09E6E00F8B0FE /* BaseLabel.swift in Sources */,
 				400017FE28D1528E00F8B0FE /* CurrentConditionsModel.swift in Sources */,
 				4000178C28D09E8A00F8B0FE /* UIView+Extension.swift in Sources */,
+				4000180228D2096800F8B0FE /* Locale+Extension.swift in Sources */,
 				400017E528D0FE5C00F8B0FE /* CityByLocationModel.swift in Sources */,
 				400017C028D0CBF800F8B0FE /* MainPageViewController.swift in Sources */,
 				400017EA28D1131D00F8B0FE /* HourlyWeatherCellContainerView.swift in Sources */,

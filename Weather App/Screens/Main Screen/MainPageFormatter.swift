@@ -31,7 +31,7 @@ extension MainPageFormatter {
     func convertDateFormater(date: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-        dateFormatter.locale = Locale.current
+        dateFormatter.locale = .appLanguage
 
         guard let date = dateFormatter.date(from: date) else {
             return ""
