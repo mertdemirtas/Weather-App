@@ -19,3 +19,21 @@ public extension UIColor {
     static let spinnerColor: UIColor = .white
     static let mainPageTableViewCellColor: UIColor = .clear
 }
+
+extension Date {
+    func convertDateFormater(date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        dateFormatter.locale = NSLocale.system
+
+        guard let date = dateFormatter.date(from: date) else {
+            return ""
+        }
+
+        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.locale = NSLocale.system
+        let timeStamp = dateFormatter.string(from: date)
+
+        return timeStamp
+    }
+}

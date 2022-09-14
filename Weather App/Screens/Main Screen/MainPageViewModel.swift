@@ -11,7 +11,10 @@ import CoreLocation
 class MainPageViewModel: BaseViewModel {
     private let networkManager = NetworkManager()
     private let locationManager = LocationManager()
+    private let formatter = MainPageFormatter()
+    
     public var status: LocationEnum?
+    
     var completion: ((WeatherContainerViewData) -> (Void))?
     
     
@@ -58,7 +61,7 @@ class MainPageViewModel: BaseViewModel {
     }
     
     private func bindData(result: WeatherForecastHourlyModel) {
-        let formattedResult = MainPageFormatter.formatDataToWeatherContainerViewData(data: result)
+        let formattedResult = formatter.formatDataToWeatherContainerViewData(data: result)
         completion?(formattedResult)
     }
 }

@@ -40,6 +40,7 @@ class HourlyWeatherCardView: GenericBaseView<HourlyWeatherCardViewData> {
     func reloadData() {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
+            self.collectionView.reloadInputViews()
         }
     }
 }

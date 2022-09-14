@@ -67,8 +67,28 @@ class HourlyWeatherCellContainerView: GenericBaseView<HourlyWeatherCellData> {
     
     override func loadDataView() {
         guard let data = returnData() else { return }
-        timeLabel.text = data.time
+        let convertedDate = convertDateFormater(date: data.time)
+        
+        timeLabel.text = convertedDate
         imageView.image = UIImage(named: String(data.imageNumber))
         temperatureLabel.text = String(data.temperatureValue) + "°"
+    }
+}
+
+extension HourlyWeatherCellContainerView {
+    func convertDateFormater(date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        dateFormatter.locale = Locale.current
+
+        guard let date = dateFormatter.date(from: date) else {
+            return ""
+        }
+
+        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.locale = Locale.current
+        let timeStamp = dateFormatter.string(from: date)
+
+        return timeStamp
     }
 }
