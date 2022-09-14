@@ -68,6 +68,7 @@
 		400017FA28D13E1B00F8B0FE /* MainPageFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017F928D13E1B00F8B0FE /* MainPageFormatter.swift */; };
 		400017FC28D14E2200F8B0FE /* CurrentConditionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017FB28D14E2100F8B0FE /* CurrentConditionsRequest.swift */; };
 		400017FE28D1528E00F8B0FE /* CurrentConditionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017FD28D1528E00F8B0FE /* CurrentConditionsModel.swift */; };
+		4000180028D1F16A00F8B0FE /* AccuWeatherIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 400017FF28D1F16A00F8B0FE /* AccuWeatherIcons.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +130,7 @@
 		400017F928D13E1B00F8B0FE /* MainPageFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageFormatter.swift; sourceTree = "<group>"; };
 		400017FB28D14E2100F8B0FE /* CurrentConditionsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionsRequest.swift; sourceTree = "<group>"; };
 		400017FD28D1528E00F8B0FE /* CurrentConditionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionsModel.swift; sourceTree = "<group>"; };
+		400017FF28D1F16A00F8B0FE /* AccuWeatherIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AccuWeatherIcons.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				4000176328D09D6E00F8B0FE /* Assets.xcassets */,
+				400017FF28D1F16A00F8B0FE /* AccuWeatherIcons.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 			files = (
 				4000176728D09D6E00F8B0FE /* LaunchScreen.storyboard in Resources */,
 				4000176428D09D6E00F8B0FE /* Assets.xcassets in Resources */,
+				4000180028D1F16A00F8B0FE /* AccuWeatherIcons.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
