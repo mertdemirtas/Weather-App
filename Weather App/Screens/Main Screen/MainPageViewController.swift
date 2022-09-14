@@ -10,6 +10,8 @@ import UIKit
 
 class MainPageViewController: BaseViewController<MainPageViewModel> {
     // MARK: Components
+    private var searchController: UISearchController!
+    
     private lazy var weatherContainerView: WeatherContainerView = {
         let temp = WeatherContainerView()
         temp.translatesAutoresizingMaskIntoConstraints = false
@@ -20,11 +22,21 @@ class MainPageViewController: BaseViewController<MainPageViewModel> {
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.getData()
+        setupSearchController()
+ //       viewModel.getData()
+        
         viewModel.completion = { [weak self] result in
             self?.weatherContainerView.setData(by: result)
             self?.weatherContainerView.hourlyWeatherCardView.reloadData()
         }
+    }
+    
+    private func setupSearchController() {
+        let searchResultViewModel = SearchControllerResultViewModel()
+        let searchControllerResultViewController = SearchControllerResultViewController(viewModel: searchResultViewModel)
+        let searchControllerViewModel = SearchControllerViewModel()
+        searchController = SearchController(searchResultsController: searchControllerResultViewController, viewModel: searchControllerViewModel)
+        navigationItem.searchController = searchController
     }
     
     override func addViewComponents() {

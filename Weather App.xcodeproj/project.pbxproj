@@ -70,6 +70,16 @@
 		400017FE28D1528E00F8B0FE /* CurrentConditionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400017FD28D1528E00F8B0FE /* CurrentConditionsModel.swift */; };
 		4000180028D1F16A00F8B0FE /* AccuWeatherIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 400017FF28D1F16A00F8B0FE /* AccuWeatherIcons.xcassets */; };
 		4000180228D2096800F8B0FE /* Locale+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000180128D2096800F8B0FE /* Locale+Extension.swift */; };
+		4000180528D2115600F8B0FE /* GenericBaseSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000180428D2115600F8B0FE /* GenericBaseSearchController.swift */; };
+		4000180828D2117A00F8B0FE /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000180728D2117A00F8B0FE /* SearchController.swift */; };
+		4000180A28D2118D00F8B0FE /* SearchControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000180928D2118D00F8B0FE /* SearchControllerViewModel.swift */; };
+		4000180C28D2205500F8B0FE /* SearchControllerResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000180B28D2205500F8B0FE /* SearchControllerResultViewController.swift */; };
+		4000180F28D22C1600F8B0FE /* SearchControllerResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000180E28D22C1600F8B0FE /* SearchControllerResultViewModel.swift */; };
+		4000181228D22F0C00F8B0FE /* SearchControllerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000181128D22F0C00F8B0FE /* SearchControllerContainerView.swift */; };
+		4000181428D22F2F00F8B0FE /* SearchControllerContainerViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000181328D22F2F00F8B0FE /* SearchControllerContainerViewData.swift */; };
+		4000181828D2302600F8B0FE /* SearchControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000181728D2302600F8B0FE /* SearchControllerCell.swift */; };
+		4000181A28D2303400F8B0FE /* SearchControllerCellCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000181928D2303400F8B0FE /* SearchControllerCellCardView.swift */; };
+		4000181C28D2304100F8B0FE /* SearchControllerCellCardViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000181B28D2304100F8B0FE /* SearchControllerCellCardViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +143,16 @@
 		400017FD28D1528E00F8B0FE /* CurrentConditionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionsModel.swift; sourceTree = "<group>"; };
 		400017FF28D1F16A00F8B0FE /* AccuWeatherIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AccuWeatherIcons.xcassets; sourceTree = "<group>"; };
 		4000180128D2096800F8B0FE /* Locale+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extension.swift"; sourceTree = "<group>"; };
+		4000180428D2115600F8B0FE /* GenericBaseSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBaseSearchController.swift; sourceTree = "<group>"; };
+		4000180728D2117A00F8B0FE /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		4000180928D2118D00F8B0FE /* SearchControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerViewModel.swift; sourceTree = "<group>"; };
+		4000180B28D2205500F8B0FE /* SearchControllerResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerResultViewController.swift; sourceTree = "<group>"; };
+		4000180E28D22C1600F8B0FE /* SearchControllerResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerResultViewModel.swift; sourceTree = "<group>"; };
+		4000181128D22F0C00F8B0FE /* SearchControllerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerContainerView.swift; sourceTree = "<group>"; };
+		4000181328D22F2F00F8B0FE /* SearchControllerContainerViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerContainerViewData.swift; sourceTree = "<group>"; };
+		4000181728D2302600F8B0FE /* SearchControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerCell.swift; sourceTree = "<group>"; };
+		4000181928D2303400F8B0FE /* SearchControllerCellCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerCellCardView.swift; sourceTree = "<group>"; };
+		4000181B28D2304100F8B0FE /* SearchControllerCellCardViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerCellCardViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +238,7 @@
 				400017ED28D114A400F8B0FE /* BaseCollectionViewCell.swift */,
 				400017EF28D114CB00F8B0FE /* GenericCollectionViewCell.swift */,
 				400017F128D114E100F8B0FE /* BaseCollectionView.swift */,
+				4000180428D2115600F8B0FE /* GenericBaseSearchController.swift */,
 			);
 			path = "Base Components";
 			sourceTree = "<group>";
@@ -328,6 +349,7 @@
 		400017CB28D0DD6400F8B0FE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4000180628D2116400F8B0FE /* Search Controller */,
 				400017E028D0F9F700F8B0FE /* Hourly Weather Info */,
 				400017CC28D0DD6900F8B0FE /* Weather Detailized Component */,
 			);
@@ -399,6 +421,46 @@
 				4000178E28D09EB300F8B0FE /* LocationManager */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		4000180628D2116400F8B0FE /* Search Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4000181528D2300400F8B0FE /* Search Controller Container View */,
+				4000180D28D22BDC00F8B0FE /* Result View */,
+				4000180728D2117A00F8B0FE /* SearchController.swift */,
+				4000180928D2118D00F8B0FE /* SearchControllerViewModel.swift */,
+			);
+			path = "Search Controller";
+			sourceTree = "<group>";
+		};
+		4000180D28D22BDC00F8B0FE /* Result View */ = {
+			isa = PBXGroup;
+			children = (
+				4000180B28D2205500F8B0FE /* SearchControllerResultViewController.swift */,
+				4000180E28D22C1600F8B0FE /* SearchControllerResultViewModel.swift */,
+			);
+			path = "Result View";
+			sourceTree = "<group>";
+		};
+		4000181528D2300400F8B0FE /* Search Controller Container View */ = {
+			isa = PBXGroup;
+			children = (
+				4000181628D2301300F8B0FE /* Cell */,
+				4000181128D22F0C00F8B0FE /* SearchControllerContainerView.swift */,
+				4000181328D22F2F00F8B0FE /* SearchControllerContainerViewData.swift */,
+			);
+			path = "Search Controller Container View";
+			sourceTree = "<group>";
+		};
+		4000181628D2301300F8B0FE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4000181728D2302600F8B0FE /* SearchControllerCell.swift */,
+				4000181928D2303400F8B0FE /* SearchControllerCellCardView.swift */,
+				4000181B28D2304100F8B0FE /* SearchControllerCellCardViewData.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,6 +545,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4000180A28D2118D00F8B0FE /* SearchControllerViewModel.swift in Sources */,
 				400017D028D0DDDE00F8B0FE /* WeatherContainerViewData.swift in Sources */,
 				400017B528D0AD9800F8B0FE /* Endpoint.swift in Sources */,
 				400017B128D0AD7300F8B0FE /* HttpMethods.swift in Sources */,
@@ -516,25 +579,34 @@
 				400017CA28D0D58A00F8B0FE /* WeatherForecastDaily.swift in Sources */,
 				4000178628D09E6E00F8B0FE /* BaseView.swift in Sources */,
 				4000176228D09D6C00F8B0FE /* Weather_App.xcdatamodeld in Sources */,
+				4000181C28D2304100F8B0FE /* SearchControllerCellCardViewData.swift in Sources */,
 				400017EC28D1147700F8B0FE /* HourlyWeatherCollectionViewCell.swift in Sources */,
 				400017F828D1390900F8B0FE /* SearchByLocationRequest.swift in Sources */,
+				4000181228D22F0C00F8B0FE /* SearchControllerContainerView.swift in Sources */,
 				4000178428D09E6E00F8B0FE /* BaseTableView.swift in Sources */,
 				400017EE28D114A400F8B0FE /* BaseCollectionViewCell.swift in Sources */,
 				400017E828D112A700F8B0FE /* HourlyWeatherCellData.swift in Sources */,
 				4000178B28D09E8A00F8B0FE /* UIColor+Extension.swift in Sources */,
 				4000178228D09E6E00F8B0FE /* GenericBaseView.swift in Sources */,
+				4000180828D2117A00F8B0FE /* SearchController.swift in Sources */,
 				4000179E28D09EC100F8B0FE /* BaseViewModel.swift in Sources */,
 				400017B728D0B05600F8B0FE /* NetworkConstants.swift in Sources */,
+				4000180528D2115600F8B0FE /* GenericBaseSearchController.swift in Sources */,
+				4000181828D2302600F8B0FE /* SearchControllerCell.swift in Sources */,
 				4000178528D09E6E00F8B0FE /* GenericTableViewCell.swift in Sources */,
 				400017FA28D13E1B00F8B0FE /* MainPageFormatter.swift in Sources */,
 				400017F428D116F100F8B0FE /* HourlyWeatherCardView.swift in Sources */,
 				4000178128D09E6E00F8B0FE /* AlertViewData.swift in Sources */,
 				400017D828D0E3A800F8B0FE /* AtmosphericEventsContainerView.swift in Sources */,
 				4000177F28D09E6E00F8B0FE /* BaseTwoButtonAlertViewController.swift in Sources */,
+				4000181428D22F2F00F8B0FE /* SearchControllerContainerViewData.swift in Sources */,
 				4000179728D09EB300F8B0FE /* LocationCoordinates.swift in Sources */,
 				4000179A28D09EB300F8B0FE /* LocationManager.swift in Sources */,
+				4000180F28D22C1600F8B0FE /* SearchControllerResultViewModel.swift in Sources */,
 				4000175828D09D6C00F8B0FE /* AppDelegate.swift in Sources */,
 				400017DA28D0E3F800F8B0FE /* AtmosphericEventsData.swift in Sources */,
+				4000180C28D2205500F8B0FE /* SearchControllerResultViewController.swift in Sources */,
+				4000181A28D2303400F8B0FE /* SearchControllerCellCardView.swift in Sources */,
 				4000177D28D09E6E00F8B0FE /* BaseViewController.swift in Sources */,
 				400017C528D0CC5300F8B0FE /* MainPageBuilder.swift in Sources */,
 				400017BA28D0B10000F8B0FE /* AccuWeatherNetworkConstants.swift in Sources */,
