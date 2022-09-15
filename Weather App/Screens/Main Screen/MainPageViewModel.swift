@@ -14,8 +14,9 @@ class MainPageViewModel: BaseViewModel {
     private let formatter = MainPageFormatter()
     
     public var status: LocationEnum?
+    private var viewControllerTitle = ""
     
-    var completion: ((WeatherContainerViewData) -> (Void))?
+    var completion: ((WeatherContainerViewData, String) -> (Void))?
     
     
     public func requestLocationPermission() {
@@ -45,6 +46,7 @@ class MainPageViewModel: BaseViewModel {
     
     private func fetchData(request: Endpoint) {
         networkManager.request(from: request, completionHandler: { [weak self] (result: CityByLocationModel) in
+            self?.viewControllerTitle = result.localizedName ?? ""
             self?.prepareWeatherRequest(locationID: result.key)
         })
     }
@@ -62,6 +64,7 @@ class MainPageViewModel: BaseViewModel {
     
     private func bindData(result: WeatherForecastHourlyModel) {
         let formattedResult = formatter.formatDataToWeatherContainerViewData(data: result)
-        completion?(formattedResult)
+        
+        completion?(formattedResult, viewControllerTitle)
     }
 }

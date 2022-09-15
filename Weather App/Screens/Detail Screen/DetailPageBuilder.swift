@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 class DetailPageBuilder {
-    class func build(keyValue: String?) -> UIViewController {
-        let viewModel = DetailPageViewModel(keyValue: keyValue ?? "")
+    class func build(keyValue: String?, title: String?) -> UIViewController {
+        let viewModel = DetailPageViewModel(keyValue: keyValue ?? "", viewControllerTitle: title ?? "")
         let viewController = DetailPageViewController(viewModel: viewModel)
         return viewController
     }

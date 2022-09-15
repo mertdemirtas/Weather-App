@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SearchControllerCellCardView: GenericBaseView<SearchControllerCellCardViewData> {
+class SearchControllerResultCellCardButton: BaseButton<SearchControllerResultCellCardData> {
     // MARK: Constants
     private let xAxisConstraint: CGFloat = 20.0
     private let yAxisConstraint: CGFloat = 5.0
@@ -25,7 +25,9 @@ class SearchControllerCellCardView: GenericBaseView<SearchControllerCellCardView
     
     private lazy var firstWord: BaseLabel = {
         let temp = BaseLabel()
+        temp.numberOfLines = 0
         temp.textColor = .black
+        temp.font = UIFont.systemFont(ofSize: 19)
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
     }()
@@ -46,6 +48,6 @@ class SearchControllerCellCardView: GenericBaseView<SearchControllerCellCardView
     
     override func loadDataView() {
         guard let data = returnData() else { return }
-        firstWord.text = data.firstWord ?? ""
+        firstWord.text = data.title ?? ""
     }
 }

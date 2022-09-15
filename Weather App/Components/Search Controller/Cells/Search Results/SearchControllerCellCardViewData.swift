@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SearchControllerCellCardViewData {
-    let firstWord: String?
+struct SearchControllerResultCellCardData {
+    let title: String?
     let key: String?
 }

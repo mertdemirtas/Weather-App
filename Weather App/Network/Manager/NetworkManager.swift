@@ -16,6 +16,7 @@ protocol NetworkManagerDelegate: AnyObject {
 class NetworkManager {
     
     weak var delegate: NetworkManagerDelegate?
+    var networkState: (() -> Void)?
     
     public func request<T: Codable>(from endPoint: Endpoint, completionHandler: @escaping (T) -> Void) {
         // MARK: URL

@@ -11,20 +11,20 @@ import RxRelay
 class SearchControllerViewModel {
     private let networkManager = NetworkManager()
     private let userDefaultsManager = UserDefaultsManager()
-    var itemsToDisplay = BehaviorRelay<[SearchControllerCellCardViewData]>(value: [])
+    var displayableList = BehaviorRelay<[SearchControllerDisplayItem]>(value: [])
+    private var itemsToDisplay = [SearchControllerDisplayItem]()
 
     func addSearchedWord(searchedWord: String) {
         userDefaultsManager.addData(searchedWord: searchedWord)
     }
     
     func getSearchedWords() {
+        clearData()
         let searchedKeywords = userDefaultsManager.getData()
-        var itemsArray = [SearchControllerCellCardViewData]()
-        
         for element in searchedKeywords.reversed() {
-            itemsArray.append(SearchControllerCellCardViewData(firstWord: element, key: ""))
+            itemsToDisplay.append(SearchControllerDisplayItem.searchedKeywords(data: SearchedKeywordsTableViewCellData(searchedWordText: element)))
         }
-        itemsToDisplay.accept(itemsArray)
+        displayableList.accept(itemsToDisplay)
     }
     
     public func prepareWeatherRequest(searchText: String?) {
@@ -41,12 +41,16 @@ class SearchControllerViewModel {
     }
     
     private func bindData(result: CitiesModel) {
-        let formattedResult = SearchControllerResultViewControllerFormatter.citiesModelToSearchControllerCellCardViewData(citiesModel: result)
-        itemsToDisplay.accept(formattedResult)
+        clearData()
+        let formattedResult = SearchControllerFormatter.citiesModelToSearchControllerCellCardViewData(citiesModel: result)
+        for element in formattedResult {
+            itemsToDisplay.append(SearchControllerDisplayItem.result(data: element))
+        }
+        displayableList.accept(itemsToDisplay)
     }
     
     func clearData() {
-        let emptyArray = [SearchControllerCellCardViewData]()
-        itemsToDisplay.accept(emptyArray)
+        itemsToDisplay.removeAll()
+        displayableList.accept(itemsToDisplay)
     }
 }

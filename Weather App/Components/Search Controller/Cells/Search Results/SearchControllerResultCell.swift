@@ -7,6 +7,6 @@
 
 import Foundation
 
-class SearchControllerCell: GenericTableViewCell<SearchControllerCellCardViewData, SearchControllerCellCardView> {
+class SearchControllerResultCell: GenericTableViewCell<SearchControllerResultCellCardData, SearchControllerResultCellCardButton> {
     // MARK: Lifecycle
 }

@@ -6,13 +6,15 @@
 //
 
 import UIKit
+import RxCocoa
 
 class SearchController: BaseSearchController<SearchControllerViewModel> {
     // MARK: Components
     private lazy var tableView: BaseTableView = {
         let temp = BaseTableView()
         temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.registerCell(cells: [SearchControllerCell.self])
+        temp.registerCell(cells: [SearchControllerResultCell.self,
+                                  SearchedKeywordsTableViewCell.self])
         return temp
     }()
     
@@ -24,7 +26,7 @@ class SearchController: BaseSearchController<SearchControllerViewModel> {
         
         searchResultsUpdater = self
         searchBar.autocapitalizationType = .none
-        hidesNavigationBarDuringPresentation = true
+//        hidesNavigationBarDuringPresentation = true
         definesPresentationContext = true
         obscuresBackgroundDuringPresentation = true
     }
@@ -44,10 +46,24 @@ class SearchController: BaseSearchController<SearchControllerViewModel> {
     }
     // MARK: Bind TableView Data
     private func bindTableView() {
-        _ = self.viewModel.itemsToDisplay.bind(to: tableView.rx.items) { tableView, index, element in
-            let cell: SearchControllerCell = self.tableView.dequeueReusableCell(withIdentifier: "SearchControllerCell", for: IndexPath(item: index, section: 0)) as! SearchControllerCell
-            cell.setData(data: SearchControllerCellCardViewData(firstWord: element.firstWord, key: element.key))
-            return cell
+        _ = self.viewModel.displayableList.bind(to: tableView.rx.items) { tableView, index, element in
+            switch element {
+            case .searchedKeywords(let data):
+                let cell: SearchedKeywordsTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "SearchedKeywordsTableViewCell", for: IndexPath(item: index, section: 0)) as! SearchedKeywordsTableViewCell
+                cell.setData(data: data)
+                cell.genericView.setButtonAction { [weak self] in
+                    self?.searchBar.text = data.searchedWordText
+                }
+                return cell
+            case .result(let data):
+                let cell: SearchControllerResultCell = self.tableView.dequeueReusableCell(withIdentifier: "SearchControllerResultCell", for: IndexPath(item: index, section: 0)) as! SearchControllerResultCell
+                
+                cell.setData(data: data)
+                cell.genericView.setButtonAction { [weak self] in
+                    self?.presentingViewController?.navigationController?.pushViewController(DetailPageBuilder.build(keyValue: data.key, title: data.title), animated: true)
+                }
+                return cell
+            }
         }
     }
 }

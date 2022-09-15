@@ -25,7 +25,8 @@ class MainPageViewController: BaseViewController<MainPageViewModel> {
         setupSearchController()
         viewModel.getData()
         
-        viewModel.completion = { [weak self] result in
+        viewModel.completion = { [weak self] result, title in
+            self?.title = title
             self?.weatherContainerView.setData(by: result)
             self?.weatherContainerView.hourlyWeatherCardView.reloadData()
         }

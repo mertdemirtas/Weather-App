@@ -11,26 +11,6 @@ class BaseButton<T>: GenericBaseView<T>, UIGestureRecognizerDelegate {
     
     private var buttonTapCallback: () -> () = {}
     
-    private lazy var shadowContainer: UIView = {
-        let temp = UIView()
-        temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.layer.shadowColor = UIColor.black.cgColor
-        temp.layer.shadowOffset = CGSize(width: 0, height: 2)
-        temp.layer.shadowRadius = 4
-        temp.layer.shadowOpacity = 0.4
-        temp.layer.cornerRadius = 6
-        return temp
-    }()
-
-    lazy var containerView: UIView = {
-        let temp = UIView()
-        temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.layer.cornerRadius = 10
-        temp.clipsToBounds = true
-        temp.backgroundColor = .white
-        return temp
-    }()
-    
     lazy var buttonLabel: BaseLabel = {
         let temp = BaseLabel()
         temp.textAlignment = .center
@@ -39,7 +19,6 @@ class BaseButton<T>: GenericBaseView<T>, UIGestureRecognizerDelegate {
     }()
     
     override func setupViewConfigurations() {
-        prepareShadowView()
         addTapGesture()
     }
     
@@ -60,11 +39,10 @@ class BaseButton<T>: GenericBaseView<T>, UIGestureRecognizerDelegate {
     }
     
     open func addViewOnCenter(view: UIView) {
-        self.containerView.addSubview(view)
+        addSubview(view)
         NSLayoutConstraint.activate([
-            view.leadingAnchor.constraint(equalTo: self.containerView.leadingAnchor, constant: 16.0),
-            view.trailingAnchor.constraint(equalTo: self.containerView.trailingAnchor, constant: -16.0),
-            view.centerYAnchor.constraint(equalTo: self.containerView.centerYAnchor)
+            view.centerXAnchor.constraint(equalTo: centerXAnchor),
+            view.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
     
@@ -74,23 +52,5 @@ class BaseButton<T>: GenericBaseView<T>, UIGestureRecognizerDelegate {
     
     private func buttonTappedAction() {
         buttonTapCallback()
-    }
-    
-    private func prepareShadowView() {
-        addSubview(shadowContainer)
-        shadowContainer.addSubview(containerView)
-
-        NSLayoutConstraint.activate([
-
-            shadowContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
-            shadowContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
-            shadowContainer.topAnchor.constraint(equalTo: topAnchor),
-            shadowContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
-
-            containerView.leadingAnchor.constraint(equalTo: shadowContainer.leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: shadowContainer.trailingAnchor),
-            containerView.topAnchor.constraint(equalTo: shadowContainer.topAnchor),
-            containerView.bottomAnchor.constraint(equalTo: shadowContainer.bottomAnchor)
-        ])
     }
 }

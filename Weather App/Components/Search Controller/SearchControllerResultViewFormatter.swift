@@ -7,12 +7,12 @@
 
 import Foundation
 
-class SearchControllerResultViewControllerFormatter {
-    class func citiesModelToSearchControllerCellCardViewData(citiesModel: CitiesModel) -> [SearchControllerCellCardViewData] {
-        var data = [SearchControllerCellCardViewData]()
+class SearchControllerFormatter {
+    class func citiesModelToSearchControllerCellCardViewData(citiesModel: CitiesModel) -> [SearchControllerResultCellCardData] {
+        var data = [SearchControllerResultCellCardData]()
         for element in citiesModel {
             let firstWord = "\(element.localizedName ?? ""), \(element.administrativeArea?.localizedName ?? "")"
-            data.append(SearchControllerCellCardViewData(firstWord: firstWord, key: element.key))
+            data.append(SearchControllerResultCellCardData(title: firstWord, key: element.key))
         }
         return data
     }
