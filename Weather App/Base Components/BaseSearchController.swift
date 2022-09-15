@@ -10,7 +10,6 @@ import UIKit
 class BaseSearchController<T>: UISearchController {
     
     var viewModel: T!
-    var vSpinner : UIView?
     
     init(viewModel: T) {
         super.init(searchResultsController: nil)
@@ -29,27 +28,4 @@ class BaseSearchController<T>: UISearchController {
     
     func prepareSearchControllerConfigurations() { }
     func prepareViewControllerConfigurations() { }
-}
-extension BaseSearchController {
-    func showSpinner(onView : UIView) {
-        let spinnerView = UIView.init(frame: onView.bounds)
-        spinnerView.backgroundColor = .appBackgroundColor
-        let ai = UIActivityIndicatorView.init(style: UIActivityIndicatorView.Style.large)
-        ai.color = .spinnerColor
-        ai.startAnimating()
-        ai.center = spinnerView.center
-        
-        DispatchQueue.main.async {
-            spinnerView.addSubview(ai)
-            onView.addSubview(spinnerView)
-        }
-        vSpinner = spinnerView
-    }
-    
-    func removeSpinner() {
-        DispatchQueue.main.async {
-            self.vSpinner?.removeFromSuperview()
-            self.vSpinner = nil
-        }
-    }
 }

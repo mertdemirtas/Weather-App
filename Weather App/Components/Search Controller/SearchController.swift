@@ -26,7 +26,6 @@ class SearchController: BaseSearchController<SearchControllerViewModel> {
         
         searchResultsUpdater = self
         searchBar.autocapitalizationType = .none
-//        hidesNavigationBarDuringPresentation = true
         definesPresentationContext = true
         obscuresBackgroundDuringPresentation = true
     }
