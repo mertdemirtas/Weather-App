@@ -32,10 +32,8 @@ class MainPageViewController: BaseViewController<MainPageViewModel> {
     }
     
     private func setupSearchController() {
-        let searchResultViewModel = SearchControllerResultViewModel()
-        let searchControllerResultViewController = SearchControllerResultViewController(viewModel: searchResultViewModel)
         let searchControllerViewModel = SearchControllerViewModel()
-        searchController = SearchController(searchResultsController: searchControllerResultViewController, viewModel: searchControllerViewModel)
+        searchController = SearchController(viewModel: searchControllerViewModel)
         navigationItem.searchController = searchController
     }
     

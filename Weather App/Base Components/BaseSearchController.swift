@@ -1,21 +1,19 @@
 //
 //  BaseSearchController.swift
-//  MovieApp
+//  MovieApp-Invio
 //
 //  Created by Mert Demirtaş on 23.06.2022.
 //
 
 import UIKit
 
-class GenericBaseSearchController<T, ResultViewModel, ResultViewController: BaseViewController<ResultViewModel>>: UISearchController {
+class BaseSearchController<T>: UISearchController {
     
     var viewModel: T!
-    var resultViewController: BaseViewController<ResultViewModel>!
     var vSpinner : UIView?
     
-    init(searchResultsController: ResultViewController, viewModel: T? = nil) {
-        super.init(searchResultsController: searchResultsController)
-        self.resultViewController = searchResultsController
+    init(viewModel: T) {
+        super.init(searchResultsController: nil)
         self.viewModel = viewModel
     }
     
@@ -25,13 +23,14 @@ class GenericBaseSearchController<T, ResultViewModel, ResultViewController: Base
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepareSearchControllerConfigurations()
         prepareViewControllerConfigurations()
+        prepareSearchControllerConfigurations()
     }
+    
     func prepareSearchControllerConfigurations() { }
     func prepareViewControllerConfigurations() { }
 }
-extension GenericBaseSearchController {
+extension BaseSearchController {
     func showSpinner(onView : UIView) {
         let spinnerView = UIView.init(frame: onView.bounds)
         spinnerView.backgroundColor = .appBackgroundColor
