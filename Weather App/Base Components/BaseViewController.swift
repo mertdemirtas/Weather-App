@@ -42,14 +42,11 @@ class BaseViewController<T: BaseViewModel>: UIViewController {
         let navBar = self.navigationController?.navigationBar
         
         navBar?.tintColor = .black
-        navBar?.prefersLargeTitles = true
         navBar?.isTranslucent = true
         navBar?.standardAppearance = nav
         navBar?.scrollEdgeAppearance = nav
         navBar?.compactAppearance = nav
-        
-        navigationItem.setValue(true, forKey: "__largeTitleTwoLineMode")
-        
+                
         prepareActivityIndicator()
     }
     

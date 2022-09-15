@@ -28,18 +28,17 @@ class SearchController: GenericBaseSearchController<SearchControllerViewModel, S
 extension SearchController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        self.resultViewController.viewModel.abc()
+        resultViewController.viewModel.itemsToDisplay.accept([SearchControllerCellCardViewData]())
 
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        resultViewController.viewModel.abc()
+        resultViewController.viewModel.prepareWeatherRequest(searchText: searchBar.text)
     }
 }
 
 extension SearchController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        print("aaaa")
     }
 }
 

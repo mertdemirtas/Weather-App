@@ -23,7 +23,7 @@ class MainPageViewController: BaseViewController<MainPageViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchController()
- //       viewModel.getData()
+        viewModel.getData()
         
         viewModel.completion = { [weak self] result in
             self?.weatherContainerView.setData(by: result)

@@ -8,5 +8,6 @@
 import Foundation
 
 struct SearchControllerCellCardViewData {
-    let word: String?
+    let firstWord: String?
+    let key: String?
 }

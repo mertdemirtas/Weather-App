@@ -7,25 +7,35 @@
 
 import Foundation
 import UIKit
+import RxCocoa
 
 class SearchControllerContainerView: GenericBaseView<SearchControllerContainerViewData> {
     // MARK: Components
     private lazy var tableView: BaseTableView = {
         let temp = BaseTableView()
-        temp.dataSource = self
+        temp.separatorStyle = .singleLine
         temp.registerCell(cells: [SearchControllerCell.self])
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
     }()
-}
-
-extension SearchControllerContainerView: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let data = returnData() else { return 0 }
-        return data.words.count
+    
+    override func addMajorViewComponents() {
+        addSubview(tableView)
+        
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
+        ])
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+    override func loadDataView() {
+        guard let data = returnData() else { return }
+        _ = data.words.bind(to: tableView.rx.items) { tableView, index, element in
+            let cell: SearchControllerCell = self.tableView.dequeueReusableCell(withIdentifier: "SearchControllerCell", for: IndexPath(item: index, section: 0)) as! SearchControllerCell
+            cell.setData(data: SearchControllerCellCardViewData(firstWord: element.firstWord, key: element.key))
+            return cell
+        }
     }
 }

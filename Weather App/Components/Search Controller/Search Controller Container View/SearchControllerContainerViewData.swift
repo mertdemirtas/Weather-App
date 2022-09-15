@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import RxSwift
+import RxRelay
 
 struct SearchControllerContainerViewData {
-    let words: [String]
+    let words: BehaviorRelay<[SearchControllerCellCardViewData]>
 }

@@ -50,7 +50,7 @@ class MainPageViewModel: BaseViewModel {
     }
     
     private func prepareWeatherRequest(locationID: String?) {
-        let request = HourlyWeatherForecastRequest(locationID: "1284832")
+        let request = HourlyWeatherForecastRequest(locationID: locationID ?? "")
         getWeatherData(request: request)
     }
     

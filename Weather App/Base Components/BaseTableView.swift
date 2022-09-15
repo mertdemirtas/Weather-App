@@ -22,7 +22,6 @@ class BaseTableView: UITableView {
         self.backgroundView = UIView()
         self.backgroundColor = .clear
         self.backgroundView!.backgroundColor = .appBackgroundColor
-        separatorStyle = .none
     }
     
     private func register<T: BaseTableViewCell>(cell: T.Type) {
