@@ -4,7 +4,7 @@
 This project was made to show the weather according to your location or the cities you searched for.
 
 <h2 align="left">Project Gif</h1>
-![Alt text](https://github.com/mertdemirtas/Weather-App/blob/main/gif.gif)
+![Alt text](https://media.giphy.com/media/C7ZxAVtTooep5pOZEE/giphy.gif)
 
 ## Build With
 - iOS
