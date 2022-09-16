@@ -8,13 +8,21 @@
 import Foundation
 
 class UserDefaultsManager {
+    private let maxSearchedKeywordCount: Int = 5
+    
     private let userDefaults = UserDefaults.standard
     private let userDefaultsKey = "searchedKeywords"
     
     func addData(searchedWord: String) {
         var searchedKeywords = getData()
         
-        if(searchedKeywords.count == 5) {
+        if(searchedKeywords.contains(searchedWord)) {
+            if let index = searchedKeywords.firstIndex(of: searchedWord) {
+                searchedKeywords.remove(at: index)
+            }
+        }
+        
+        if(searchedKeywords.count == maxSearchedKeywordCount) {
             searchedKeywords.removeFirst()
         }
         
