@@ -64,10 +64,17 @@ extension BaseViewController {
     public func spinner() {
         _ = viewModel.loading.subscribe(onNext: { [weak self] (data) in
             switch data {
-            case true:
+            
+            case .processing:
                 self?.activityIndicator.startAnimating()
-            case false:
+            case .done:
                 self?.activityIndicator.stopAnimating()
+            case .clientError:
+                self?.activityIndicator.stopAnimating()
+                break
+            case .serverError:
+                self?.activityIndicator.stopAnimating()
+                break
             }
         })
     }

@@ -8,17 +8,19 @@
 import Alamofire
 import Foundation
 
-protocol NetworkManagerDelegate: AnyObject {
-    func clientError()
-    func serverError()
+enum NetworkStates {
+    case processing
+    case done
+    case clientError
+    case serverError
 }
 
 class NetworkManager {
     
-    weak var delegate: NetworkManagerDelegate?
-    var networkState: (() -> Void)?
+    var networkStateClosure: ((NetworkStates) -> Void)?
     
     public func request<T: Codable>(from endPoint: Endpoint, completionHandler: @escaping (T) -> Void) {
+        networkStateClosure?(.processing)
         // MARK: URL
         let urlString = endPoint.url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         let url = URL(string: urlString ?? "")!
@@ -30,15 +32,16 @@ class NetworkManager {
         AF.request(urlRequest).responseDecodable(of: T.self) { [weak self] response in
             switch response.result {
             case .success(let data):
+                self?.networkStateClosure?(.done)
                 completionHandler(data)
             case .failure(_):
                 guard let statusCode = response.response?.statusCode else { return }
                 let httpError = HTTPErrors.init(statusCode: statusCode)
                 switch httpError {
                 case .clientError:
-                    self?.delegate?.clientError()
+                    self?.networkStateClosure?(.clientError)
                 case .serverError:
-                    self?.delegate?.serverError()
+                    self?.networkStateClosure?(.serverError)
                 }
             }
         }

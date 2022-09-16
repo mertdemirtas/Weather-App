@@ -15,7 +15,6 @@ protocol MainPageViewModelDelegate : AnyObject {
 
 class MainPageViewModel: BaseViewModel {
     // MARK: Managers
-    private let networkManager: NetworkManager
     private let locationManager: LocationManager
     
     // MARK: Formatter
@@ -31,8 +30,7 @@ class MainPageViewModel: BaseViewModel {
     // MARK: Delegate
     weak var delegate: MainPageViewModelDelegate?
     
-    init(networkManager: NetworkManager, locationManager: LocationManager) {
-        self.networkManager = networkManager
+    init(locationManager: LocationManager) {
         self.locationManager = locationManager
         super.init()
     }

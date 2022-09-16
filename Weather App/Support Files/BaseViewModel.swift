@@ -7,5 +7,28 @@
 import RxSwift
 
 class BaseViewModel {
-    var loading = BehaviorSubject<Bool>(value: false)
+    var loading = BehaviorSubject<NetworkStates>(value: .done)
+    
+    public let networkManager = NetworkManager()
+    
+    init() {
+        networkState()
+    }
+}
+
+extension BaseViewModel {
+    func networkState() {
+        networkManager.networkStateClosure = { [weak self] state in
+            switch(state) {
+            case .processing:
+                self?.loading.onNext(.processing)
+            case .done:
+                self?.loading.onNext(.done)
+            case .clientError:
+                self?.loading.onNext(.clientError)
+            case .serverError:
+                self?.loading.onNext(.serverError)
+            }
+        }
+    }
 }

@@ -57,7 +57,6 @@ class AtmosphericEventsContainerView: GenericBaseView<AtmosphericEventsData> {
     // MARK: Override Methods
     override func addMajorViewComponents() {
         layer.cornerRadius = 30.0
-        backgroundColor = UIColor(r: 255, g: 255, b: 255, alpha: 0.5)
         
         addSubview(containerStackView)
         
@@ -84,5 +83,6 @@ class AtmosphericEventsContainerView: GenericBaseView<AtmosphericEventsData> {
         eventImage.image = UIImage(named: data.image ?? "")
         eventName.text = data.name
         eventValue.text = data.value
+        backgroundColor = UIColor(r: 255, g: 255, b: 255, alpha: 0.5)
     }
 }

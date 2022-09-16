@@ -11,9 +11,9 @@ import UIKit
 class MainPageBuilder {
     class func build() -> UIViewController {
         let locationManager = LocationManager()
-        let networkManager = NetworkManager()
-        let viewModel = MainPageViewModel(networkManager: networkManager, locationManager: locationManager)
+        let viewModel = MainPageViewModel(locationManager: locationManager)
         let vc = MainPageViewController(viewModel: viewModel)
+        vc.title = "Weather App"
         return vc
     }
 }

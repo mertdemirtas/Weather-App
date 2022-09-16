@@ -8,7 +8,6 @@
 import Foundation
 
 class DetailPageViewModel: BaseViewModel {
-    private let networkManager = NetworkManager()
     private let formatter = MainPageFormatter()
 
     var completion: ((WeatherContainerViewData, String) -> (Void))?
