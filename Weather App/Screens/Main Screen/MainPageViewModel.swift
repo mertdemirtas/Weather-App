@@ -7,34 +7,55 @@
 
 import Foundation
 import CoreLocation
+import RxSwift
+
+protocol MainPageViewModelDelegate : AnyObject {
+    func showLocationPermissionPopup()
+}
 
 class MainPageViewModel: BaseViewModel {
-    private let networkManager = NetworkManager()
-    private let locationManager = LocationManager()
+    // MARK: Managers
+    private let networkManager: NetworkManager
+    private let locationManager: LocationManager
+    
+    // MARK: Formatter
     private let formatter = MainPageFormatter()
     
-    public var status: LocationEnum?
     private var viewControllerTitle = ""
+    private let disposeBag = DisposeBag()
     
-    var completion: ((WeatherContainerViewData, String) -> (Void))?
+    // MARK: Closures
+    public var locationClosure: (() -> Void)?
+    var requestCompletion: ((WeatherContainerViewData, String) -> (Void))?
     
+    // MARK: Delegate
+    weak var delegate: MainPageViewModelDelegate?
     
-    public func requestLocationPermission() {
-        locationManager.controlLocationPermission(completionHandler: { [weak self] result in
-            self?.status = result
-        })
+    init(networkManager: NetworkManager, locationManager: LocationManager) {
+        self.networkManager = networkManager
+        self.locationManager = locationManager
+        super.init()
     }
     
-    public func getLocationStatus() -> LocationEnum? {
-        return status
+    // MARK: Class Private functions
+    func subscribeLocation() {
+        _ = locationManager.status.subscribe(onNext: { [weak self] (status) in
+            switch(status) {
+            case .usable:
+                self?.getLocation()
+            case .notDetermined:
+                break
+            case .unusable:
+                self?.delegate?.showLocationPermissionPopup()
+            }
+        }).disposed(by: disposeBag)
     }
     
-    func getData() {
-        getLocation()
+    func requestLocation() {
+        locationManager.requestLocationPermission()
     }
     
     private func getLocation() {
-        locationManager.requestLocationPermission()
         let currentLocation = locationManager.getLocation()
         prepareGeoPositionSearch(currentLocation: currentLocation)
     }
@@ -65,6 +86,6 @@ class MainPageViewModel: BaseViewModel {
     private func bindData(result: WeatherForecastHourlyModel) {
         let formattedResult = formatter.formatDataToWeatherContainerViewData(data: result)
         
-        completion?(formattedResult, viewControllerTitle)
+        requestCompletion?(formattedResult, viewControllerTitle)
     }
 }

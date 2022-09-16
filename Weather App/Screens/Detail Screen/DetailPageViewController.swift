@@ -16,7 +16,6 @@ class DetailPageViewController: BaseViewController<DetailPageViewModel> {
         return temp
     }()
     
-    
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +34,7 @@ class DetailPageViewController: BaseViewController<DetailPageViewModel> {
             weatherContainerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             weatherContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             weatherContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            weatherContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10.0)
+            weatherContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 }

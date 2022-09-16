@@ -7,45 +7,47 @@
 
 import Foundation
 import CoreLocation
+import RxSwift
 
 class LocationManager: CLLocationManager {
-    private var status: LocationEnum?
+    public var status = BehaviorSubject<LocationEnum>(value: .notDetermined)
+    var str = ""
+    
+    override init() {
+        super.init()
+        self.delegate = self
+        //   status.on(.next(LocationEnum(permission: authorizationStatus)))
+    }
     
     public func requestLocationPermission() {
         requestWhenInUseAuthorization()
-        status = LocationEnum.init(permission: authorizationStatus)
-    }
-    
-    public func controlLocationPermission(completionHandler: (LocationEnum) -> Void) {
-        status = LocationEnum.init(permission: authorizationStatus)
-        
-        switch status {
-        case .unusable:
-            status = LocationEnum.init(permission: authorizationStatus)
-            completionHandler(status ?? .unusable)
-            
-        case .usable:
-            completionHandler(status ?? .usable)
-            
-        case .notDetermined:
-            requestWhenInUseAuthorization()
-            status = LocationEnum.init(permission: authorizationStatus)
-            completionHandler(status ?? .notDetermined)
-            
-        case .none:
-            requestWhenInUseAuthorization()
-            status = LocationEnum.init(permission: authorizationStatus)
-            completionHandler(status ?? .unusable)
-            
-        }
-    }
-    
-    public func getStatus() -> LocationEnum {
-        return status ?? .unusable
+        status.onNext(LocationEnum(permission: authorizationStatus))
     }
     
     public func getLocation() -> CLLocationCoordinate2D {
         guard let location = location else { return CLLocationCoordinate2D() }
         return CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+    }
+}
+
+extension LocationManager: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager,
+                         didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .restricted, .denied:
+            self.status.onNext(LocationEnum.unusable)
+            
+        case .authorizedWhenInUse:
+            self.status.onNext(LocationEnum.usable)
+            
+        case .authorizedAlways:
+            self.status.onNext(LocationEnum.usable)
+            
+        case .notDetermined:
+            self.status.onNext(LocationEnum.notDetermined)
+            
+        @unknown default:
+            print("error")
+        }
     }
 }

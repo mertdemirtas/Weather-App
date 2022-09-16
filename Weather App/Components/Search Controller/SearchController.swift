@@ -12,6 +12,7 @@ class SearchController: BaseSearchController<SearchControllerViewModel> {
     // MARK: Components
     private lazy var tableView: BaseTableView = {
         let temp = BaseTableView()
+        temp.keyboardDismissMode = .onDrag
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.registerCell(cells: [SearchControllerResultCell.self,
                                   SearchedKeywordsTableViewCell.self])

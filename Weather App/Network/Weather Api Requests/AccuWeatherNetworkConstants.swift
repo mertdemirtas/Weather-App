@@ -8,6 +8,6 @@
 import Foundation
 
 struct AccuWeatherNetworkConstants: NetworkConstants {
-    var apiKey = "ElAntFw6ZfgzuVxPgwFJDcJtuTJ24VwM"
+    var apiKey = "stEj8OdDxJikdWhr43sISnTUcHfLWRGC"
     var apiURL = "https://dataservice.accuweather.com/"
 }

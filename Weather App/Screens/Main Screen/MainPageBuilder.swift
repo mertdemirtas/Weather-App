@@ -10,9 +10,10 @@ import UIKit
 
 class MainPageBuilder {
     class func build() -> UIViewController {
-        let viewModel = MainPageViewModel()
+        let locationManager = LocationManager()
+        let networkManager = NetworkManager()
+        let viewModel = MainPageViewModel(networkManager: networkManager, locationManager: locationManager)
         let vc = MainPageViewController(viewModel: viewModel)
-        vc.title = "Tuzla"
         return vc
     }
 }

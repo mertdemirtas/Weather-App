@@ -18,24 +18,18 @@ class MainPageViewController: BaseViewController<MainPageViewModel> {
         return temp
     }()
     
-    
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchController()
-        viewModel.getData()
+        viewModel.subscribeLocation()
+        viewModel.requestLocation()
         
-        viewModel.completion = { [weak self] result, title in
+        viewModel.requestCompletion = { [weak self] result, title in
             self?.title = title
             self?.weatherContainerView.setData(by: result)
             self?.weatherContainerView.hourlyWeatherCardView.reloadData()
         }
-    }
-    
-    private func setupSearchController() {
-        let searchControllerViewModel = SearchControllerViewModel()
-        searchController = SearchController(viewModel: searchControllerViewModel)
-        navigationItem.searchController = searchController
     }
     
     override func addViewComponents() {
@@ -47,5 +41,13 @@ class MainPageViewController: BaseViewController<MainPageViewModel> {
             weatherContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             weatherContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10.0)
         ])
+    }
+}
+
+extension MainPageViewController {
+    private func setupSearchController() {
+        let searchControllerViewModel = SearchControllerViewModel()
+        searchController = SearchController(viewModel: searchControllerViewModel)
+        navigationItem.searchController = searchController
     }
 }
