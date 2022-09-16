@@ -60,7 +60,7 @@ class AlertViewControllerContainerView: GenericBaseView<AlertViewData> {
         let temp = UIStackView()
         temp.spacing = 20
         temp.axis = .horizontal
-        temp.distribution = .fill
+        temp.distribution = .fillEqually
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
     }()
@@ -70,6 +70,10 @@ class AlertViewControllerContainerView: GenericBaseView<AlertViewData> {
         temp.buttonLabel.text = "Kapat"
         temp.buttonLabel.textColor = .black
         temp.addViewOnCenter(view: temp.buttonLabel)
+        temp.buttonLabel.font = UIFont.systemFont(ofSize: 17)
+        temp.layer.borderWidth = 1
+        temp.layer.borderColor = UIColor.darkGray.cgColor
+        temp.layer.cornerRadius = 10
         temp.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
@@ -80,6 +84,9 @@ class AlertViewControllerContainerView: GenericBaseView<AlertViewData> {
         temp.addViewOnCenter(view: temp.buttonLabel)
         temp.buttonLabel.textColor = .systemBlue
         temp.buttonLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        temp.layer.borderWidth = 1
+        temp.layer.borderColor = UIColor.darkGray.cgColor
+        temp.layer.cornerRadius = 10
         temp.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp

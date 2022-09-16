@@ -83,6 +83,7 @@
 		402A0BC228D3952F00D27F70 /* SearchedKeywordsTableViewCellCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A0BC128D3952F00D27F70 /* SearchedKeywordsTableViewCellCardButton.swift */; };
 		402A0BC428D396C000D27F70 /* SearchedKeywordsTableViewCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A0BC328D396C000D27F70 /* SearchedKeywordsTableViewCellData.swift */; };
 		402A0BC628D3979B00D27F70 /* SearchControllerDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A0BC528D3979B00D27F70 /* SearchControllerDisplayItem.swift */; };
+		409513DE28D42386000D6EDA /* LocationPermissonAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409513DD28D42386000D6EDA /* LocationPermissonAlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,6 +160,7 @@
 		402A0BC128D3952F00D27F70 /* SearchedKeywordsTableViewCellCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedKeywordsTableViewCellCardButton.swift; sourceTree = "<group>"; };
 		402A0BC328D396C000D27F70 /* SearchedKeywordsTableViewCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedKeywordsTableViewCellData.swift; sourceTree = "<group>"; };
 		402A0BC528D3979B00D27F70 /* SearchControllerDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerDisplayItem.swift; sourceTree = "<group>"; };
+		409513DD28D42386000D6EDA /* LocationPermissonAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissonAlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,6 +356,7 @@
 		400017CB28D0DD6400F8B0FE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				409513DC28D42371000D6EDA /* Alert Popup */,
 				4000180628D2116400F8B0FE /* Search Controller */,
 				400017E028D0F9F700F8B0FE /* Hourly Weather Info */,
 				400017CC28D0DD6900F8B0FE /* Weather Detailized Component */,
@@ -496,6 +499,14 @@
 			path = "Searched Keywords";
 			sourceTree = "<group>";
 		};
+		409513DC28D42371000D6EDA /* Alert Popup */ = {
+			isa = PBXGroup;
+			children = (
+				409513DD28D42386000D6EDA /* LocationPermissonAlertViewController.swift */,
+			);
+			path = "Alert Popup";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -580,6 +591,7 @@
 			files = (
 				402A0BC228D3952F00D27F70 /* SearchedKeywordsTableViewCellCardButton.swift in Sources */,
 				4000180A28D2118D00F8B0FE /* SearchControllerViewModel.swift in Sources */,
+				409513DE28D42386000D6EDA /* LocationPermissonAlertViewController.swift in Sources */,
 				400017D028D0DDDE00F8B0FE /* WeatherContainerViewData.swift in Sources */,
 				400017B528D0AD9800F8B0FE /* Endpoint.swift in Sources */,
 				400017B128D0AD7300F8B0FE /* HttpMethods.swift in Sources */,
@@ -789,8 +801,10 @@
 				INFOPLIST_FILE = "Weather App/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Weather App";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Uygulama hiç bir şekilde kişisel verilerinize erişmeyecektir. Konum bilgisine izin vermeniz yakınınızda bulunan nöbetçi eczaneleri bulmanızı sağlar.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Deneme;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -802,7 +816,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -818,8 +832,10 @@
 				INFOPLIST_FILE = "Weather App/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Weather App";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Uygulama hiç bir şekilde kişisel verilerinize erişmeyecektir. Konum bilgisine izin vermeniz yakınınızda bulunan nöbetçi eczaneleri bulmanızı sağlar.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Deneme;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -831,7 +847,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

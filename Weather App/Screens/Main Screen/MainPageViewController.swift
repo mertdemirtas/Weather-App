@@ -18,10 +18,17 @@ class MainPageViewController: BaseViewController<MainPageViewModel> {
         return temp
     }()
     
+    private lazy var alertViewController: LocationPermissonAlertViewController = {
+        let temp = LocationPermissonAlertViewController()
+        temp.modalPresentationStyle = .overCurrentContext
+        return temp
+    }()
+    
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchController()
+        viewModel.delegate = self
         viewModel.subscribeLocation()
         viewModel.requestLocation()
         
@@ -49,5 +56,13 @@ extension MainPageViewController {
         let searchControllerViewModel = SearchControllerViewModel()
         searchController = SearchController(viewModel: searchControllerViewModel)
         navigationItem.searchController = searchController
+    }
+}
+
+extension MainPageViewController: MainPageViewModelDelegate {
+    func showLocationPermissionPopup() {
+        DispatchQueue.main.async {
+            self.present(self.alertViewController, animated: true)
+        }
     }
 }

@@ -11,17 +11,14 @@ import RxSwift
 
 class LocationManager: CLLocationManager {
     public var status = BehaviorSubject<LocationEnum>(value: .notDetermined)
-    var str = ""
     
     override init() {
         super.init()
         self.delegate = self
-        //   status.on(.next(LocationEnum(permission: authorizationStatus)))
     }
     
     public func requestLocationPermission() {
         requestWhenInUseAuthorization()
-        status.onNext(LocationEnum(permission: authorizationStatus))
     }
     
     public func getLocation() -> CLLocationCoordinate2D {
