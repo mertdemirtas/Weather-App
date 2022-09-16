@@ -8,13 +8,6 @@
 import Alamofire
 import Foundation
 
-enum NetworkStates {
-    case processing
-    case done
-    case clientError
-    case serverError
-}
-
 class NetworkManager {
     
     var networkStateClosure: ((NetworkStates) -> Void)?

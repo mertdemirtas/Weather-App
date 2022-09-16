@@ -84,6 +84,7 @@
 		402A0BC428D396C000D27F70 /* SearchedKeywordsTableViewCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A0BC328D396C000D27F70 /* SearchedKeywordsTableViewCellData.swift */; };
 		402A0BC628D3979B00D27F70 /* SearchControllerDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A0BC528D3979B00D27F70 /* SearchControllerDisplayItem.swift */; };
 		409513DE28D42386000D6EDA /* LocationPermissonAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409513DD28D42386000D6EDA /* LocationPermissonAlertViewController.swift */; };
+		409513E028D42FAF000D6EDA /* NetworkStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409513DF28D42FAF000D6EDA /* NetworkStates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,6 +162,7 @@
 		402A0BC328D396C000D27F70 /* SearchedKeywordsTableViewCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedKeywordsTableViewCellData.swift; sourceTree = "<group>"; };
 		402A0BC528D3979B00D27F70 /* SearchControllerDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerDisplayItem.swift; sourceTree = "<group>"; };
 		409513DD28D42386000D6EDA /* LocationPermissonAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissonAlertViewController.swift; sourceTree = "<group>"; };
+		409513DF28D42FAF000D6EDA /* NetworkStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,13 +200,13 @@
 		4000175628D09D6C00F8B0FE /* Weather App */ = {
 			isa = PBXGroup;
 			children = (
-				4000182A28D33EE700F8B0FE /* Managers */,
-				400017CB28D0DD6400F8B0FE /* Components */,
-				400017AC28D0A13A00F8B0FE /* Network */,
-				4000176F28D09D8800F8B0FE /* Assets */,
 				4000176E28D09D7E00F8B0FE /* App Files */,
+				4000176F28D09D8800F8B0FE /* Assets */,
 				4000178D28D09E9700F8B0FE /* Support Files */,
 				4000177028D09E6E00F8B0FE /* Base Components */,
+				400017CB28D0DD6400F8B0FE /* Components */,
+				4000182A28D33EE700F8B0FE /* Managers */,
+				400017AC28D0A13A00F8B0FE /* Network */,
 				400017BE28D0CBD900F8B0FE /* Screens */,
 				4000178828D09E8A00F8B0FE /* Extensions */,
 				4000176528D09D6E00F8B0FE /* LaunchScreen.storyboard */,
@@ -308,6 +310,7 @@
 				400017B228D0AD8900F8B0FE /* HTTPErrors.swift */,
 				400017B428D0AD9800F8B0FE /* Endpoint.swift */,
 				400017B628D0B05600F8B0FE /* NetworkConstants.swift */,
+				409513DF28D42FAF000D6EDA /* NetworkStates.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				400017F628D1175700F8B0FE /* HourlyWeatherCardViewData.swift in Sources */,
 				400017B328D0AD8900F8B0FE /* HTTPErrors.swift in Sources */,
 				4000182228D27D6400F8B0FE /* SearchControllerResultViewFormatter.swift in Sources */,
+				409513E028D42FAF000D6EDA /* NetworkStates.swift in Sources */,
 				400017CE28D0DDC100F8B0FE /* WeatherContainerView.swift in Sources */,
 				4000178028D09E6E00F8B0FE /* AlertViewControllerContainerView.swift in Sources */,
 				400017D328D0E16300F8B0FE /* WeatherDetailComponent.swift in Sources */,
