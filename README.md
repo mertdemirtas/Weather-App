@@ -1,10 +1,8 @@
 <h1 align="center">Weather App</h1>
 <h2 align="left">Project Description</h1>
 
-This project was made to show the weather according to your location or the cities you searched for.
-
-<h2 align="left">Project Gif</h1>
 ![Alt text](https://media.giphy.com/media/C7ZxAVtTooep5pOZEE/giphy.gif)
+This project was made to show the weather according to your location or the cities you searched for.
 
 ## Build With
 - iOS
