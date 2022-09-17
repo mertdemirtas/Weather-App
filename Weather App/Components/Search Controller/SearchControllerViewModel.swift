@@ -9,8 +9,8 @@ import Foundation
 import RxRelay
 
 class SearchControllerViewModel {
-    private let networkManager = NetworkManager()
-    private let userDefaultsManager = UserDefaultsManager()
+    private let networkManager = NetworkManager.shared
+    private let userDefaultsManager = UserDefaultsManager.shared
     var displayableList = BehaviorRelay<[SearchControllerDisplayItem]>(value: [])
     private var itemsToDisplay = [SearchControllerDisplayItem]()
 

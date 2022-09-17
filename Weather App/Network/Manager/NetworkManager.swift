@@ -9,8 +9,13 @@ import Alamofire
 import Foundation
 
 class NetworkManager {
+    static let shared = NetworkManager()
     
     var networkStateClosure: ((NetworkStates) -> Void)?
+    
+    private init() {
+        
+    }
     
     public func request<T: Codable>(from endPoint: Endpoint, completionHandler: @escaping (T) -> Void) {
         networkStateClosure?(.processing)

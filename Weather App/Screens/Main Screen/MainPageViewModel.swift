@@ -15,7 +15,7 @@ protocol MainPageViewModelDelegate : AnyObject {
 
 class MainPageViewModel: BaseViewModel {
     // MARK: Managers
-    private let locationManager: LocationManager
+    private let locationManager = LocationManager.shared
     
     // MARK: Formatter
     private let formatter = MainPageFormatter()
@@ -29,11 +29,6 @@ class MainPageViewModel: BaseViewModel {
     
     // MARK: Delegate
     weak var delegate: MainPageViewModelDelegate?
-    
-    init(locationManager: LocationManager) {
-        self.locationManager = locationManager
-        super.init()
-    }
     
     // MARK: Class Private functions
     func subscribeLocation() {

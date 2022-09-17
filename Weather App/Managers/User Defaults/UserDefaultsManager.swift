@@ -8,6 +8,13 @@
 import Foundation
 
 class UserDefaultsManager {
+    
+    static let shared = UserDefaultsManager()
+    
+    private init() {
+        
+    }
+    
     private let maxSearchedKeywordCount: Int = 5
     
     private let userDefaults = UserDefaults.standard

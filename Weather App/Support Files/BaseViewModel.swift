@@ -9,7 +9,7 @@ import RxSwift
 class BaseViewModel {
     var loading = BehaviorSubject<NetworkStates>(value: .done)
     
-    public let networkManager = NetworkManager()
+    public let networkManager = NetworkManager.shared
     
     init() {
         networkState()

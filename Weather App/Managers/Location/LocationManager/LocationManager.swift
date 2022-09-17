@@ -10,9 +10,11 @@ import CoreLocation
 import RxSwift
 
 class LocationManager: CLLocationManager {
+    static let shared = LocationManager()
+    
     public var status = BehaviorSubject<LocationEnum>(value: .notDetermined)
     
-    override init() {
+    private override init() {
         super.init()
         self.delegate = self
     }

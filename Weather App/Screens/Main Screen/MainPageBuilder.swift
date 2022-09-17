@@ -10,8 +10,7 @@ import UIKit
 
 class MainPageBuilder {
     class func build() -> UIViewController {
-        let locationManager = LocationManager()
-        let viewModel = MainPageViewModel(locationManager: locationManager)
+        let viewModel = MainPageViewModel()
         let vc = MainPageViewController(viewModel: viewModel)
         vc.title = "Weather App"
         return vc
